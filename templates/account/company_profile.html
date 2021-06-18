@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card text-center">
+                {% if user.is_authenticated %}
+                    <h1>You are about to change your profile info</h2>
+                    <form class="profile-company" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <div class="button-wrapper submit">
+                                <input type="submit" value="Update" />
+                            </div>
+                            <br>
+                    </form>
+                {% else %}
+                    <h2>You have to be login to edit your profile info</h2>
+                {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

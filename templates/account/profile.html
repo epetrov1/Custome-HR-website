@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card">
+            {% if user.is_authenticated and user.is_worker %}
+                <img class="img-thumbnail" src="{{ user.worker.image.url }}">
+                <div class="info">
+                    <h2>Username: {{ user.username }}</h2>
+                    <p class="text-scondary"><b>Email:</b> {{ user.email }}</p>
+                    <p class="text-scondary"><b>First Name:</b> {{ user.worker.first_name }}</p>
+                    <p class="text-scondary"><b>Last Name:</b> {{ user.worker.last_name }}</p>
+                    <p class="text-scondary"><b>Mobile:</b> {{ user.worker.phone }}</p>
+                    
+                </div>
+                <button type="button" class="btn btn-secondary">
+                    <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_profile_edit' user.id %}">Edit profile information</a>
+                </button>
+                <br>
+                <button type="button" class="btn btn-success">
+                    <a style="text-decoration: none; color:white; font-weight:20" href="#">Apply for a job</a>
+                </button>
+            {% elif user.is_authenticated and user.is_company %}
+                <img class="img-thumbnail" src="{{ user.company.image.url }}">
+                <div class="info">
+                    <h2>Username: {{ user.username }}</h2>
+                    <p class="text-scondary"><b>Email:</b> {{ user.email }}</p>
+                    <p class="text-scondary"><b>Company name:</b> {{ user.company.company_name }}</p>
+                    <p class="text-scondary"><b>Address:</b> {{ user.company.address }}</p>
+                    <p class="text-scondary"><b>Mobile:</b> {{ user.company.phone }}</p>
+                    
+                </div>
+                <button type="button" class="btn btn-secondary">
+                    <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_profile_edit' user.id %}">Edit company information</a>
+                </button>
+                <br>
+                <button type="button" class="btn btn-success">
+                    <a style="text-decoration: none; color:white; font-weight:20" href="#">Find employees</a>
+                </button>
+            {% else %}
+                <h2>You have to be login to view this page</h2>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

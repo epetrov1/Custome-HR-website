@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    <form class="profile-worker" method="POST" action="{% url 'worker_profile_edit' %}">
+          {% csrf_token %}
+          {{ form|crispy }}
+          <br>
+          <button class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
+
+{% endblock content %}
