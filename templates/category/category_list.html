@@ -1,7 +1,47 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-    <h2>This is Category page</h2>
-
+<div class="container">
+    <h1>This is Category page</h1>
+    {% for subcat in subcategory %}
+        <h2><span class="badge bg-info">{{ subcat.category }}</span></h2>
+        <div class="card-group">
+            {% for subc in subcategory %}
+                <div class="card text-center" style="border: none;">
+                    <img class="card-img-top mx-auto" style="width:200px; height:200px;" src="{{ subc.img.url }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ subc.name }}</h5>
+                        {% if user.is_anonymous %}
+                            <button type="button" class="btn btn-success">
+                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_apply' %}">Apply for job</a>
+                            </button><br>
+                            <button type="button" class="btn btn-success">
+                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_apply' %}">Get offer for workers</a>
+                            </button>
+                        {% endif %}
+                        {% if user.is_authenticated and user.is_worker %}
+                            <button type="button" class="btn btn-success">
+                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_apply' %}">Apply for job</a>
+                            </button>
+                        {% elif user.is_authenticated and user.is_company %}
+                            <button type="button" class="btn btn-success">
+                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_apply' %}">Get offer for workers</a>
+                            </button>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+            {% comment %} <div class="card">
+                <div class="card-image">
+                    <img src="{{ subcat.img.url }}" alt="job">
+                </div>
+                <div class="card-text">
+                    <h4>{{ subcat.name }}</h4>
+                </div>
+            </div> {% endcomment %}
+        </div>
+    {% endfor %}  
+</div>
 
 {% endblock content %}

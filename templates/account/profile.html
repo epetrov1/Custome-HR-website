@@ -22,7 +22,7 @@
                 </button>
                 <br>
                 <button type="button" class="btn btn-success">
-                    <a style="text-decoration: none; color:white; font-weight:20" href="#">Apply for a job</a>
+                    <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' %}">Apply for a job</a>
                 </button>
             {% elif user.is_authenticated and user.is_company %}
                 <img class="img-thumbnail" src="{{ user.company.image.url }}">
@@ -39,7 +39,7 @@
                 </button>
                 <br>
                 <button type="button" class="btn btn-success">
-                    <a style="text-decoration: none; color:white; font-weight:20" href="#">Find employees</a>
+                    <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' %}">Find employees</a>
                 </button>
             {% else %}
                 <h2>You have to be login to view this page</h2>
