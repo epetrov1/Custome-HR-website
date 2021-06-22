@@ -14,19 +14,22 @@
                         <h5 class="card-title">{{ subc.name }}</h5>
                         {% if user.is_anonymous %}
                             <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_apply' %}">Apply for job</a>
+                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_cv' subc.id %}">Apply for job</a>
                             </button><br>
                             <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_apply' %}">Get offer for workers</a>
+                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_apply' subc.id %}">Get offer for workers</a>
                             </button>
                         {% endif %}
                         {% if user.is_authenticated and user.is_worker %}
                             <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_apply' %}">Apply for job</a>
+                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_cv' subc.id %}">Apply for job</a>
                             </button>
                         {% elif user.is_authenticated and user.is_company %}
                             <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_apply' %}">Get offer for workers</a>
+                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_apply' subc.id %}">Get offer for workers</a>
+                            </button>
+                            <button type="button" class="btn btn-success">
+                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'workers_cvs' subc.id %}">Availables workers {{ num_cv }}</a>
                             </button>
                         {% endif %}
                     </div>

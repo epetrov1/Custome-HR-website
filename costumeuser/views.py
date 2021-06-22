@@ -2,8 +2,8 @@ from . forms import WorkerSignupForm, CompanySignupForm, ProfileWorkerEdit, Prof
 from allauth.account.views import SignupView
 from django.contrib.auth.decorators import login_required
 from . decorators import worker_required, company_required
-from . models import User, Worker, Company
-from django.shortcuts import redirect, render, get_object_or_404
+from . models import User
+from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 

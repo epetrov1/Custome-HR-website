@@ -1,5 +1,6 @@
 from django.db import models
-from costumeuser.models import Company, Worker
+from django.urls import reverse
+from costumeuser.models import Company, Worker, User
 
 class Category(models.Model):
     name= models.CharField(max_length=250)
@@ -15,45 +16,104 @@ class SubCategory(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('category:company_order', kwargs={'id': self.subactegory.id})
 
-""" class Cv(models.Model):
+
+class Cv(models.Model):
+    GENDER = [
+        ('Femail', 'Femail'),
+        ('Male', 'Male'),
+    ]
+
+    DRIVING_LICENSE = [
+        ('Yes', 'Yes'),
+        ('No', 'No'),
+    ]
+    LANG1 = [
+        ('English', 'English'),
+        ('German', 'German'),
+        ('French', 'French'),
+        ('Italian', 'Italian'),
+        ('Spanish', 'Spanish'),
+        ('Turkish', 'Turkish'),
+        ('Russian', 'Russian'),
+    ]
+
+    LANG_LEVELS = [
+        ('Basic', 'Basic'),
+        ('Medium', 'Medium'),
+        ('Fluent', 'Fluent'),
+    ]
+
+    COUNTRY = [
+        ('UK', 'UK'),
+        ('Germany', 'Germany'),
+        ('France', 'France'),
+        ('Italy', 'Italy'),
+        ('Netherlands', 'Netherlands'),
+        ('Switzerland', 'Switzerland'),
+        ('Poland', 'Poland'),
+        ('Greece', 'Greece'),
+        ('Sweden', 'Sweden'),
+        ('Bulgaria', 'Bulgaria'),
+        ('Belgium', 'Belgium'),
+        ('Austria', 'Austria'),
+        ('Hungary', 'Hungary'),
+        ('Denmark', 'Denmark'),
+        ('Finland', 'Finland'),
+        ('Norway', 'Norway'),
+        ('Czechia', 'Czechia'),
+        ('Irland', 'Irland'),
+        ('Romania', 'Romania'),
+        ('Cyprus', 'Cyprus'),
+        ('Slovenia', 'Slovenia'),
+        ('Lithuania', 'Lithuania'),
+        ('Latvia', 'Latvia'),
+        ('Russian Federation', 'Russian Federation'),
+        ('Not Europe', 'Not Europe'),
+    ]
+
+
     job = models.ForeignKey(SubCategory, on_delete=models.CASCADE)
-    worker = models.(Worker, on_delete=models.CASCADE)
-    birth_day = models.Date()
-    gender = models.CharField(max_length=50)
-    driving_license = models.CharField(max_length=10)
-    lang1 = models.CharField(max_length=20)
-    lang1_level = models.CharField(max_length=50)
-    lang2 = models.CharField(max_length=20)
-    lang2_level = models.CharField(max_length=50)
-    lang3 = models.CharField(max_length=20)
-    lang3_level = models.CharField(max_length=50)
-    ready_to_start = models.Date()
-    sertificate1 = models.ImageField(upload_to="cv_sertificate")
-    sertificate1 = models.ImageField(upload_to="cv_sertificate")
+    worker = models.ForeignKey(User, on_delete=models.CASCADE)
+    birth_day = models.DateField()
+    gender = models.CharField(max_length=50, choices=GENDER)
+    driving_license = models.CharField(max_length=10, choices=DRIVING_LICENSE)
+    first_lang = models.CharField(max_length=20, choices=LANG1, blank=True)
+    first_lang_level = models.CharField(max_length=50, choices=LANG_LEVELS, blank=True)
+    second_lang = models.CharField(max_length=20, choices=LANG1, blank=True)
+    second_lang_level = models.CharField(max_length=50, choices=LANG_LEVELS, blank=True)
+    third_lang = models.CharField(max_length=20, choices=LANG1, blank=True)
+    third_lang_level = models.CharField(max_length=50, choices=LANG_LEVELS, blank=True)
+    ready_to_start = models.DateField()
+    sertificate_1 = models.ImageField(upload_to="cv_sertificate", blank=True)
+    sertificate_2 = models.ImageField(upload_to="cv_sertificate", blank=True)
+    #Last 3 job Expiriance 
+    country_1 = models.CharField(max_length=50, choices=COUNTRY)
+    company_name_1 = models.CharField(max_length=50)
+    start_date_1 = models.DateField()
+    end_date_1 = models.DateField()
+    country_2 = models.CharField(max_length=50, choices=COUNTRY)
+    company_name_2 = models.CharField(max_length=50)
+    start_date_2 = models.DateField()
+    end_date_2 = models.DateField()
+    country_3 = models.CharField(max_length=50, choices=COUNTRY)
+    company_name_3 = models.CharField(max_length=50)
+    start_date_3 = models.DateField()
+    end_date_3 = models.DateField()
+    employ = models.BooleanField(default=False)
 
-    country1 = models.CharField(max_length=50)
-    company_name1 = models.CharField(max_length=50)
-    start_date1 = models.DateField()
-    end_date1 = models.DateField()
-    country2 = models.CharField(max_length=50)
-    company_name2 = models.CharField(max_length=50)
-    start_date2 = models.DateField()
-    end_date2 = models.DateField()
-    country3 = models.CharField(max_length=50)
-    company_name3 = models.CharField(max_length=50)
-    start_date3 = models.DateField()
-    end_date3 = models.DateField()
-    employ = models.BooleanField(default=False) """
 
-
-""" class CompanyOrder(models.Model):
-    job_titlle = models.ForeignKey(SubCategory, on_delete=models.CASCADE)
-    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+class CompanyOrder(models.Model):
+    job_titlle = models.ForeignKey(SubCategory, on_delete=models.CASCADE, related_name="subcategory")
+    company = models.ForeignKey(User, on_delete=models.CASCADE)
     country = models.CharField(max_length=100)
     city = models.CharField(max_length=100)
     address = models.CharField(max_length=250)
     workers_number = models.CharField(max_length=10)
     start_date = models.DateField()
     end_date = models.DateField()
- """
+    submit_date = models.DateField(auto_now_add=True)
+    completed = models.BooleanField(default=False)
+

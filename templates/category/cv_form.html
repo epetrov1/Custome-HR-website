@@ -8,20 +8,20 @@
     <div class="row justify-content-center">
         <div class="col-lg-6">
             <div class="card">
-                <h1><b style="color:red">{{ user.username }}</b> are about to request a offer for <i style="color:green">{{ subcat.name }}</i></h1>
-                {% if user.is_authenticated and user.is_company %}
+                <h1><b style="color:red">{{ user.username }}</b> are about to apply for job like <i style="color:green">{{ subcat.name }}</i></h1>
+                {% if user.is_authenticated and user.is_worker %}
                     <form class="profile-company" method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
-                            {{ form.start_date|as_crispy_field }}
+                            {{ form|crispy }}
                             {% comment %} {{ form.start_date|as_crispy_field }} {% endcomment %}
                             <br>
                             <div class="button-wrapper submit">
-                                <input class="btn btn-primary" type="submit" value="Request price" />
+                                <input class="btn btn-primary" type="submit" value="Apply for {{ subcat.name }}" />
                             </div>
                             <br>
                     </form>
                 {% elif user.is_authenticated and user.is_worker %}
-                    <h2>You have to be register as Company to take offer for workers</h2>
+                    <h2>You have to be register as Wroker to apply for Job.</h2>
                 {% else %}
                     404
                 {% endif %}
