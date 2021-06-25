@@ -8,6 +8,9 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('category:category_list', kwargs={'id': self.category.id, 'id': self.category_1.id})
+
 class SubCategory(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="category", related_query_name="category", verbose_name="category")
     name = models.CharField(max_length=250)
@@ -17,7 +20,7 @@ class SubCategory(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('category:company_order', kwargs={'id': self.subactegory.id})
+        return reverse('category:company_order', kwargs={'id': self.subcategory.id})
 
 
 class Cv(models.Model):

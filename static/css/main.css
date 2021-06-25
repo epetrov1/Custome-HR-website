@@ -1,0 +1,40 @@
+/* html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    max-height: auto !important;
+} */
+.body {
+    
+    background-image: linear-gradient(to bottom left, #97C492, #BF92C4);
+    background-repeat: no-repeat;
+}
+.masthead {
+    height: 90vh;
+    min-height: 400px;
+    background-image: url(../img/contract.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main-header { 
+    padding-top: 230px;
+    text-align: right;
+    color: black;
+    font-family: 'Pattaya', sans-serif;
+}
+
+.headerone {
+    background-color: lightgray;
+    opacity: 0.3;
+}
+
+
+.btn {
+    background-color: #97C492;
+}
+
+.counter {
+    font-size : 52px;
+}

@@ -3,7 +3,7 @@ from . import views
 #from .views import CompanyOrderView
 
 urlpatterns = [
-    path('all/', views.category_list, name='category'),
+    path('all/<int:id>/', views.category_list, name='category'),
     path('worker-apply/', views.worker_cv, name='worker_apply'),
     path('company/apply/<int:id>/', views.company_order, name='company_apply'),
     path('worker/cv/<int:id>/', views.worker_cv, name='worker_cv'),

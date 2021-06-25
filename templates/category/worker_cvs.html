@@ -1,15 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
-{% block content %}
-        {% for c in cv %}
-            {% if c.employ == False %}
-            <h2>{{ worker.username }}</h2>
-            <h2>{{ c.worker.username }}</h2>
-            <h3>{{ c.birth_day }}</h3>
-            
-            {% endif %}
 
-        {% endfor %}
+
+{% block content %}
+<br>
+<br>
+    {% for c in cv %}
+        {% if c.employ == False %}
+        <h2>{{ worker.username }}</h2>
+        <h2>{{ c.worker.username }}</h2>
+        <h3>{{ c.birth_day }}</h3>
+        
+        {% endif %}
+
+    {% endfor %}
 
 
 {% endblock content %}

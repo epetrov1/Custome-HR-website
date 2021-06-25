@@ -6,22 +6,26 @@ from costumeuser.decorators import worker_required, company_required
 from . models import Category, SubCategory, CompanyOrder, Cv
 
 
-
-def category_list(request):
+#List of all categorys
+def category_list(request, id):
     category = Category.objects.all()
-    subcategory = SubCategory.objects.select_related('category')
-
+    category_1 = Category.objects.all()
+    category_choise = Category.objects.get(pk=id)
+    subcategory = SubCategory.objects.select_related('category').filter(category__id=id)
     context = {
         'category': category,
         'subcategory': subcategory,
+        'category_choise': category_choise,
+        'category_1': category_1,
     }
     return render(request, 'category/category_list.html', context)
 
 
 
 
+#Register Company making a request for workers
 @login_required
-@company_required
+
 def company_order(request, id):
     subcat = SubCategory.objects.get(pk=id)
     #comp = User.objects.get(id=user.id)
@@ -60,8 +64,10 @@ def company_order(request, id):
     return render(request, 'category/company_form.html', {'form': form, 'subcat': subcat})
 
 
+
+#Workers apply CV for specific subcategory position!
 @login_required
-@worker_required
+
 def worker_cv(request, id):
     subcat = SubCategory.objects.get(pk=id)
     #comp = User.objects.get((id=request.user.id))
@@ -135,12 +141,14 @@ def worker_cv(request, id):
 
     return render(request, 'category/cv_form.html', {'form': form, 'subcat': subcat})
     
-
+#Thanks page after submit a form: CV and CompanyOrder
 def thanks(request):
     return render(request, 'thanks.html')
 
 
-
+#List of avelable workers for specific subcategory, viewed just for companys
+@login_required
+@company_required
 def workers_cvs(request, id):
     subcat = SubCategory.objects.get(pk=id)
     cv = Cv.objects.all().filter(job_id=subcat)

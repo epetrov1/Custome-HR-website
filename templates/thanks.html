@@ -1,7 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>THANKS A LOT</h1>
+<br>
+<br>
+    <div class="jumbotron text-center">
+        {% if user.is_authenticated and user.is_company %}
+            <h1 class="display-3">Thank You! {{ user.company.company_name }}</h1>
+        {% elif user.is_authenticated and user.is_worker %}
+            <h1 class="display-3">Thank You! {{ user.worker.first_name }}</h1>
+        {% endif %}
+            <p class="lead"><strong>We will contact you as soon as possible.</strong> Please be shure your contact information is correct</p>
+            <hr>
+            <p>
+            Having trouble? <a href="#">Contact us</a>
+            </p>
+            <p class="lead">
+            <a class="btn btn-success btn-sm" href="{% url 'home' %}" role="button">Continue to homepage</a>
+            </p>
+    </div>
 
 
 {% endblock content %}

@@ -101,7 +101,7 @@ def company_update(request, user_id):
                         'phone': user.company.phone, 'image': user.company.image, }
         form = ProfileCompanyEdit(default_data)
 
-    return render(request, 'account/worker_profile.html', {'form': form, 'user': user})
+    return render(request, 'account/company_profile.html', {'form': form, 'user': user})
 
 
 def home(request):

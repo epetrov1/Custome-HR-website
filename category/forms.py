@@ -1,16 +1,34 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, widgets
 from django import forms
 from .models import CompanyOrder, Cv
 
-# Create the form class.
+
+#Costume widget for a datefields
+class DateInput(forms.DateInput):
+   input_type = 'date'
+
+
+# Form for reqesting a offer from company for workers
 class CompanyOrderForm(ModelForm):
    class Meta:
+      widgets = {'start_date': DateInput, 'end_date': DateInput}
       model = CompanyOrder
       fields = ['country', 'city', 'address', 'workers_number', 'start_date', 'end_date']
 
 
+# CV form for specific subcategory
 class CvForm(ModelForm):
    class Meta:
+      widgets = {
+      'birth_day': DateInput, 
+      'ready_to_start': DateInput, 
+      'start_date_1': DateInput, 
+      'start_date_2': DateInput, 
+      'start_date_3': DateInput,
+      'end_date_1': DateInput, 
+      'end_date_2': DateInput,
+      'end_date_3': DateInput,
+      }
       model = Cv
       fields = [
          'birth_day', 
