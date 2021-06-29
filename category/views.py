@@ -152,17 +152,16 @@ def worker_cv(request, id):
 
 #CV detail view after sybmit Cv form from workers
 def cv_detail(request, id):
-    cv = Cv.objects.get(pk=id)
+    cv = Cv.objects.get(pk=id, worker=request.user)
     workers = Worker.objects.get(pk=cv.worker_id)
     return render(request, 'category/cv_detail.html', {'cv': cv, 'workers': workers})
-
 
 
 #Order detail after submit form from a Company
 @login_required
 @company_required
 def order_detail(request, id):
-    order = CompanyOrder.objects.get(pk=id)
+    order = CompanyOrder.objects.get(pk=id, company=request.user)
     comp = Company.objects.get(pk=order.company_id)
     return render(request, 'category/order_detail.html', {'order': order, 'comp': comp})
 
