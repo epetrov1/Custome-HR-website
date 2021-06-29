@@ -1,0 +1,41 @@
+.masthead {
+    height: 90vh;
+    min-height: 400px;
+    background-image: url(../img/contract.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main-header { 
+    display:flex;
+    padding-top: 230px;
+    padding-left: 600px;
+    padding-right: 40px;
+    text-align: right;
+    color: black;
+    font-family: 'Pattaya', sans-serif;
+}
+
+.headerone {
+    background-color: lightgray;
+    opacity: 0.3;
+    word-wrap: break-word;
+}
+
+.counter {
+    font-size : 52px;
+    color: #97C492;
+}
+
+.about-text {
+    font-size : 25px;
+    color: white;
+}
+
+.card-title {
+    color: #BF92C4;
+}
+.about {
+    color: white;
+    text-align: center;
+}

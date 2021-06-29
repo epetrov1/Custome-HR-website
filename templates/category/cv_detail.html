@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                {% if user.is_authenticated and user.is_worker %}
+                    <h1>CV you apply for {{ cv.job }}</h1>
+                {% elif user.is_authenticated and user.is_company %}
+                    <h1>Cv- {{ cv.job }}</h1>
+                {% endif %}
+                    <img src="{{ workers.image.url }}" style="width:200px; height:auto;">
+                    <h5>Username: {{ cv.worker.username }}</h5>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}

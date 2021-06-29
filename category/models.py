@@ -107,6 +107,9 @@ class Cv(models.Model):
     end_date_3 = models.DateField()
     employ = models.BooleanField(default=False)
 
+    def get_absolute_url(self):
+        return reverse('category:cv_detail', kwargs={'id': self.cv.id})
+
 
 class CompanyOrder(models.Model):
     job_titlle = models.ForeignKey(SubCategory, on_delete=models.CASCADE, related_name="subcategory")
@@ -120,3 +123,5 @@ class CompanyOrder(models.Model):
     submit_date = models.DateField(auto_now_add=True)
     completed = models.BooleanField(default=False)
 
+    def get_absolute_url(self):
+        return reverse('category:order_detail', kwargs={'id': self.companyorder.id})

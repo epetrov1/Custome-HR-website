@@ -4,16 +4,21 @@
 
 {% block content %}
 <br>
-<br>
+<br>     
     {% for c in cv %}
         {% if c.employ == False %}
-        <h2>{{ worker.username }}</h2>
-        <h2>{{ c.worker.username }}</h2>
-        <h3>{{ c.birth_day }}</h3>
         
+            <img class="thumbnail" style="width:25px; height:25px;" src="{{ c.worker.image.url }}">
         {% endif %}
 
     {% endfor %}
+            {% for work in workers %}
+                <h2>{{ work.first_name }}</h2>
+                <h3>{{ work.last_name }}</h3>
+                <h3>{{ work.user.email }}</h3>
+                <img src="{{ work.image.url }}" alt="Card image cap">
+            {% endfor %}
+
 
 
 {% endblock content %}

@@ -8,7 +8,7 @@ class CostumeCompanyOrder(admin.ModelAdmin):
     ordering = ('company',)
 
 class CostumeCv(admin.ModelAdmin):
-    list_display = ('worker', 'employ', 'job', 'ready_to_start', 'country_1', 'company_name_1', 'country_2', 'company_name_2', 'country_3', 'company_name_3')
+    list_display = ('id', 'worker', 'employ', 'job', 'ready_to_start', 'country_1', 'company_name_1', 'country_2', 'company_name_2', 'country_3', 'company_name_3')
     list_filter = ('employ', 'job', 'ready_to_start')
     search_fields = ('woker', 'job',)
     ordering = ('worker',)

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+        <br>
+        <br>
+            <div class="card">
+                <div class="card-header">
+                    <h1>{{ comp.company_name }} you just request a offer for: {{ order.job_titlle }}. Thank you for trusting us. We will contact you soon.</h1>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Your order</h3>
+                    <h5 class="card-text"><span class="badge bg-success">{{ order.country }}</span> - Coutntry you need employers</h5>
+                    <h5 class="card-text"><span class="badge bg-success">{{ order.city }}</span> - City you need employers</h5>
+                    <h5 class="card-text"><span class="badge bg-success">{{ order.address }}</span> - Address employers have to work</h5>
+                    <h5 class="card-text"><span class="badge bg-success">{{ order.workers_number }}</span> - Quantity employers you need</h5>
+                    <h5 class="card-text"><span class="badge bg-success">{{ order.start_date }}</span> - Start date for employers</h5>
+                    <h5 class="card-text"><span class="badge bg-success">{{ order.end_date }}</span> - End date forLast date for employers</h5>
+
+                    <a href="#" class="btn btn-success">Edit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+         
+{% endblock content %}

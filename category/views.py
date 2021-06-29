@@ -1,9 +1,12 @@
-from costumeuser.models import User
+from costumeuser.models import User, Worker, Company
 from django.shortcuts import render, redirect
 from .forms import CompanyOrderForm, CvForm
 from django.contrib.auth.decorators import login_required
 from costumeuser.decorators import worker_required, company_required
 from . models import Category, SubCategory, CompanyOrder, Cv
+from django.urls import reverse
+from django.http import HttpResponseRedirect
+
 
 
 #List of all categorys
@@ -55,7 +58,8 @@ def company_order(request, id):
                 job_titlle=job_titlle,
                 company=company,
                 )
-            return redirect('thanks')
+            comp_id = CompanyOrder.objects.all().last()
+            return HttpResponseRedirect(reverse('order_detail', kwargs={'id': comp_id.id}))
 
             
     else:
@@ -103,6 +107,7 @@ def worker_cv(request, id):
             start_date_3 = form.cleaned_data['start_date_3']
             end_date_3 = form.cleaned_data['end_date_3']
 
+            
             job = SubCategory.objects.get(pk=id)
             worker = User.objects.get(id=request.user.id)#request.user.id#form.instance.user = self.request.user
             Cv.objects.create(
@@ -133,17 +138,40 @@ def worker_cv(request, id):
                 job=job,
                 worker=worker,
                 )
-            return redirect('thanks')
-
+            worker_id = Cv.objects.all().last()
             
+            return HttpResponseRedirect(reverse('cv_detail', kwargs={'id':worker_id.id}))
+
+
     else:
         form = CvForm
 
     return render(request, 'category/cv_form.html', {'form': form, 'subcat': subcat})
-    
+
+
+
+#CV detail view after sybmit Cv form from workers
+def cv_detail(request, id):
+    cv = Cv.objects.get(pk=id)
+    workers = Worker.objects.get(pk=cv.worker_id)
+    return render(request, 'category/cv_detail.html', {'cv': cv, 'workers': workers})
+
+
+
+#Order detail after submit form from a Company
+@login_required
+@company_required
+def order_detail(request, id):
+    order = CompanyOrder.objects.get(pk=id)
+    comp = Company.objects.get(pk=order.company_id)
+    return render(request, 'category/order_detail.html', {'order': order, 'comp': comp})
+
+
+
 #Thanks page after submit a form: CV and CompanyOrder
 def thanks(request):
     return render(request, 'thanks.html')
+
 
 
 #List of avelable workers for specific subcategory, viewed just for companys
@@ -152,5 +180,5 @@ def thanks(request):
 def workers_cvs(request, id):
     subcat = SubCategory.objects.get(pk=id)
     cv = Cv.objects.all().filter(job_id=subcat)
-    #workers = User.objects.all().filter(is_worker=True)
-    return render(request, 'category/worker_cvs.html', {'subcat': subcat, 'cv': cv})
+    workers = Worker.objects.all()
+    return render(request, 'category/worker_cvs.html', {'subcat': subcat, 'cv': cv, 'workers': workers})
