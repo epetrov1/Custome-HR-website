@@ -21,7 +21,7 @@
                     <h5 class="card-text"><span class="badge bg-success">{{ order.start_date }}</span> - Start date for employers</h5>
                     <h5 class="card-text"><span class="badge bg-success">{{ order.end_date }}</span> - End date forLast date for employers</h5>
 
-                    <a href="#" class="btn btn-success">Edit</a>
+                    <a href="{% url 'order_edit' order.id %}" class="btn btn-success">Edit</a>
                 </div>
             </div>
         </div>

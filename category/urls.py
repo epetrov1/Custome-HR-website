@@ -8,7 +8,11 @@ urlpatterns = [
     path('company/apply/<int:id>/', views.company_order, name='company_apply'),
     path('worker/cv/<int:id>/', views.worker_cv, name='worker_cv'),
     path('cv/detail/<int:id>/', views.cv_detail, name="cv_detail"),
+    path('cv/edit/<int:id>', views.edit_cv, name='edit_cv'),
+    path('cv/list', views.cv_list, name='cv_list'),
     path('order/detail/<int:id>/', views.order_detail, name="order_detail"),
+    path('order/edit/<int:id>', views.edit_order, name="order_edit"),
+    path('order/list/', views.order_list, name='order_list'),
     path('company-apply/thanks/', views.thanks, name='thanks'),
     path('available-workers/<int:id>/', views.workers_cvs, name='workers_cvs'),
 

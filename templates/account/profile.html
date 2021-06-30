@@ -27,6 +27,10 @@
                     <button type="button" class="btn btn-success">
                         <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' 1 %}">Apply for a job</a>
                     </button>
+                    <br>
+                    <button type="button" class="btn btn-success">
+                        <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'cv_list' %}">My Cv's</a>
+                    </button>
                 </div>
             {% elif user.is_authenticated and user.is_company %}
                 <img class="img-thumbnail" src="{{ user.company.image.url }}">
@@ -45,6 +49,10 @@
                     <br>
                     <button type="button" class="btn btn-success">
                         <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' 1 %}">Find employees</a>
+                    </button>
+                    <br>
+                    <button type="button" class="btn btn-success">
+                        <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'order_list' %}">My orders</a>
                     </button>
                 </div>
             {% else %}

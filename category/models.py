@@ -90,8 +90,10 @@ class Cv(models.Model):
     third_lang = models.CharField(max_length=20, choices=LANG1, blank=True)
     third_lang_level = models.CharField(max_length=50, choices=LANG_LEVELS, blank=True)
     ready_to_start = models.DateField()
+    expectet_salary = models.CharField(max_length=20, blank=True)
     sertificate_1 = models.ImageField(upload_to="cv_sertificate", blank=True)
     sertificate_2 = models.ImageField(upload_to="cv_sertificate", blank=True)
+
     #Last 3 job Expiriance 
     country_1 = models.CharField(max_length=50, choices=COUNTRY)
     company_name_1 = models.CharField(max_length=50)
@@ -105,6 +107,8 @@ class Cv(models.Model):
     company_name_3 = models.CharField(max_length=50)
     start_date_3 = models.DateField()
     end_date_3 = models.DateField()
+
+    submit_date = models.DateField(auto_now_add=True)
     employ = models.BooleanField(default=False)
 
     def get_absolute_url(self):
