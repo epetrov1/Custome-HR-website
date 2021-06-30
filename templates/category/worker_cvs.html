@@ -5,7 +5,7 @@
 {% block content %}
 <br>
 <br>     
-    {% for c in cv %}
+{% comment %}     {% for c in cv %}
         {% if c.employ == False %}
         
             <img class="thumbnail" style="width:25px; height:25px;" src="{{ c.worker.image.url }}">
@@ -17,8 +17,20 @@
                 <h3>{{ work.last_name }}</h3>
                 <h3>{{ work.user.email }}</h3>
                 <img src="{{ work.image.url }}" style="width:125px; height:125px;" alt="Card image cap">
-            {% endfor %}
+            {% endfor %} {% endcomment %}
 
-
+<div class="row row-cols-1 row-cols-md-3 g-4">
+{% for work in workers %}
+    <div class="col">
+        <div class="card h-100">
+        <img src="{{ work.image.url }}" style="width:225px; height:225px;" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ work.last_name }}</h5>
+                <p class="card-text">T{{ work.first_name }}</p>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
 
 {% endblock content %}
