@@ -96,7 +96,7 @@ def edit_order(request, id):
 
 #Workers apply CV for specific subcategory position!
 @login_required
-
+@worker_required
 def worker_cv(request, id):
     subcat = SubCategory.objects.get(pk=id)
     #comp = User.objects.get((id=request.user.id))
@@ -122,14 +122,17 @@ def worker_cv(request, id):
             sertificate_2 = form.cleaned_data['sertificate_2']
             country_1 = form.cleaned_data['country_1']
             company_name_1 = form.cleaned_data['company_name_1']
+            position_1 = form.cleaned_data['position_1']
             start_date_1 = form.cleaned_data['start_date_1']
             end_date_1 = form.cleaned_data['end_date_1']
             country_2 = form.cleaned_data['country_2']
             company_name_2 = form.cleaned_data['company_name_2']
+            position_2 = form.cleaned_data['position_2']
             start_date_2 = form.cleaned_data['start_date_2']
             end_date_2 = form.cleaned_data['end_date_2']
             country_3 = form.cleaned_data['country_3']
             company_name_3 = form.cleaned_data['company_name_3']
+            position_3 = form.cleaned_data['position_3']
             start_date_3 = form.cleaned_data['start_date_3']
             end_date_3 = form.cleaned_data['end_date_3']
 
@@ -152,14 +155,17 @@ def worker_cv(request, id):
                 sertificate_2=sertificate_2,
                 country_1=country_1,
                 company_name_1=company_name_1,
+                position_1=position_1,
                 start_date_1=start_date_1,
                 end_date_1=end_date_1,
                 country_2=country_2,
                 company_name_2=company_name_2,
+                position_2=position_2,
                 start_date_2=start_date_2,
                 end_date_2=end_date_2,
                 country_3=country_3,
                 company_name_3=company_name_3,
+                position_3=position_3,
                 start_date_3=start_date_3,
                 end_date_3=end_date_3,
                 job=job,
@@ -201,14 +207,17 @@ def edit_cv(request, id):
             cv.sertificate_2 = form.cleaned_data['sertificate_2']
             cv.country_1 = form.cleaned_data['country_1']
             cv.company_name_1 = form.cleaned_data['company_name_1']
+            cv.position_1 = form.cleaned_data['position_1']
             cv.start_date_1 = form.cleaned_data['start_date_1']
             cv.end_date_1 = form.cleaned_data['end_date_1']
             cv.country_2 = form.cleaned_data['country_2']
             cv.company_name_2 = form.cleaned_data['company_name_2']
+            cv.position_2 = form.cleaned_data['position_2']
             cv.start_date_2 = form.cleaned_data['start_date_2']
             cv.end_date_2 = form.cleaned_data['end_date_2']
             cv.country_3 = form.cleaned_data['country_3']
             cv.company_name_3 = form.cleaned_data['company_name_3']
+            cv.position_3 = form.cleaned_data['position_3']
             cv.start_date_3 = form.cleaned_data['start_date_3']
             cv.end_date_3 = form.cleaned_data['end_date_3']
 
@@ -223,11 +232,11 @@ def edit_cv(request, id):
                         'third_lang_level': cv.third_lang_level, 'ready_to_start': cv.ready_to_start,
                         'expectet_salary': cv.expectet_salary, 'sertificate_1': cv.sertificate_1,
                         'sertificate_2': cv.sertificate_2, 'country_1': cv.country_1,
-                        'company_name_1': cv.company_name_1, 'start_date_1': cv.start_date_1,
+                        'company_name_1': cv.company_name_1, 'position_1': cv.position_1, 'start_date_1': cv.start_date_1,
                         'end_date_1': cv.end_date_1, 'country_2': cv.country_2,
-                        'company_name_2': cv.company_name_2, 'start_date_2': cv.start_date_2,
+                        'company_name_2': cv.company_name_2, 'position_2': cv.position_2, 'start_date_2': cv.start_date_2,
                         'end_date_2': cv.end_date_2, 'country_3': cv.country_3,
-                        'company_name_3': cv.company_name_3, 'start_date_3': cv.start_date_3,
+                        'company_name_3': cv.company_name_3, 'position_3': cv.position_3, 'start_date_3': cv.start_date_3,
                         'end_date_3': cv.end_date_3}
         form = CvForm(default_data)
 
@@ -279,8 +288,9 @@ def thanks(request):
 @company_required
 def workers_cvs(request, id):
     subcat = SubCategory.objects.get(pk=id)
-    cv = Cv.objects.all().filter(job_id=subcat)
-    workers = Worker.objects.all()
+    cv = Cv.objects.all().select_related('worker').filter(job_id=subcat)
+    workers = cv.select_related('worker').filter(main=True)
     return render(request, 'category/worker_cvs.html', {'subcat': subcat, 'cv': cv, 'workers': workers})
 
 
+#SubCategory.objects.select_related('category').filter(category__id=id)

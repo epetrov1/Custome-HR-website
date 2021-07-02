@@ -77,6 +77,10 @@ class Cv(models.Model):
         ('Not Europe', 'Not Europe'),
     ]
 
+    POSITION = [
+        ('Position I aplly', 'Position I apply'),
+        ('Different', 'Different'),
+    ]
 
     job = models.ForeignKey(SubCategory, on_delete=models.CASCADE)
     worker = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -97,14 +101,17 @@ class Cv(models.Model):
     #Last 3 job Expiriance 
     country_1 = models.CharField(max_length=50, choices=COUNTRY)
     company_name_1 = models.CharField(max_length=50)
+    position_1 = models.CharField(max_length=150, choices=POSITION, default="Position I aplly")
     start_date_1 = models.DateField()
     end_date_1 = models.DateField()
     country_2 = models.CharField(max_length=50, choices=COUNTRY)
     company_name_2 = models.CharField(max_length=50)
+    position_2 = models.CharField(max_length=150, choices=POSITION, default="Position I aplly")
     start_date_2 = models.DateField()
     end_date_2 = models.DateField()
     country_3 = models.CharField(max_length=50, choices=COUNTRY)
     company_name_3 = models.CharField(max_length=50)
+    position_3 = models.CharField(max_length=150, choices=POSITION, default="Position I aplly")
     start_date_3 = models.DateField()
     end_date_3 = models.DateField()
 

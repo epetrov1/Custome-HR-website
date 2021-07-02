@@ -46,14 +46,17 @@ class CvForm(ModelForm):
          'sertificate_2',
          'country_1',
          'company_name_1',
+         'position_1',
          'start_date_1',
          'end_date_1',
          'country_2',
          'company_name_2',
+         'position_2',
          'start_date_2',
          'end_date_2',
          'country_3',
          'company_name_3',
+         'position_3',
          'start_date_3',
          'end_date_3'
       ]

@@ -20,16 +20,18 @@
             {% endfor %} {% endcomment %}
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
-{% for work in workers %}
+{% for c in workers %}
+
     <div class="col">
         <div class="card h-100">
-        <img src="{{ work.image.url }}" style="width:225px; height:225px;" class="card-img-top" alt="...">
+            <img src="{{ c.worker.image.url }}" style="width:225px; height:225px;" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">{{ work.last_name }}</h5>
-                <p class="card-text">T{{ work.first_name }}</p>
+                <h5 class="card-title">{{ c.worker.last_name }}</h5>
+                <p class="card-text">{{ c.worker.first_name }}</p>
             </div>
         </div>
     </div>
+    
 {% endfor %}
 </div>
 

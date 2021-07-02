@@ -12,49 +12,34 @@
             {% if user.is_authenticated and user.is_worker %}
                 <img class="img-thumbnail" src="{{ user.worker.image.url }}">
                 <div class="info">
-                    <h2>Username: {{ user.username }}</h2>
-                    <p class="text-scondary"><b>Email:</b> {{ user.email }}</p>
-                    <p class="text-scondary"><b>First Name:</b> {{ user.worker.first_name }}</p>
-                    <p class="text-scondary"><b>Last Name:</b> {{ user.worker.last_name }}</p>
-                    <p class="text-scondary"><b>Mobile:</b> {{ user.worker.phone }}</p>
+                    <h2><span class="badge rounded-pill bg-success">Username:</span> {{ user.username }}</h2>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">Email:</span> {{ user.email }}</b></p>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">First Name:</span> {{ user.worker.first_name }}</b></p>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">Last Name:</span> {{ user.worker.last_name }}</b></p>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">Mobile:</span> {{ user.worker.phone }}</b></p>
                     
                 </div>
-                <div class="btn-group-vertical">
-                    <button type="button" class="btn btn-success">
-                        <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_profile_edit' user.id %}">Edit profile information</a>
-                    </button>
-                    <br>
-                    <button type="button" class="btn btn-success">
-                        <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' 1 %}">Apply for a job</a>
-                    </button>
-                    <br>
-                    <button type="button" class="btn btn-success">
-                        <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'cv_list' %}">My Cv's</a>
-                    </button>
-                </div>
+                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_profile_edit' user.id %}">Edit profile information</a>
+                <br>
+                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' 1 %}">Apply for a job</a>
+                <br />
+                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'cv_list' %}">My Cv's</a>
+                <br />
             {% elif user.is_authenticated and user.is_company %}
                 <img class="img-thumbnail" src="{{ user.company.image.url }}">
                 <div class="info">
-                    <h2>Username: {{ user.username }}</h2>
-                    <p class="text-scondary"><b>Email:</b> {{ user.email }}</p>
-                    <p class="text-scondary"><b>Company name:</b> {{ user.company.company_name }}</p>
-                    <p class="text-scondary"><b>Address:</b> {{ user.company.address }}</p>
-                    <p class="text-scondary"><b>Mobile:</b> {{ user.company.phone }}</p>
+                    <h2><span class="badge rounded-pill bg-success">Username:</span> {{ user.username }}</h2>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">Email:</span> {{ user.email }}</b></p>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">Company name:</span> {{ user.company.company_name }}</b></p>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">Address:</span> {{ user.company.address }}</b></p>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">Mobile:</span> {{ user.company.phone }}</b></p>
                     
                 </div>
-                <div class="btn-group-vertical">
-                    <button type="button" class="btn btn-success">
-                        <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_profile_edit' user.id %}">Edit company information</a>
-                    </button>
-                    <br>
-                    <button type="button" class="btn btn-success">
-                        <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' 1 %}">Find employees</a>
-                    </button>
-                    <br>
-                    <button type="button" class="btn btn-success">
-                        <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'order_list' %}">My orders</a>
-                    </button>
-                </div>
+                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_profile_edit' user.id %}">Edit company information</a>
+                <br>
+                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' 1 %}">Find employees</a>
+                <br>
+                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'order_list' %}">My orders</a>
             {% else %}
                 <h2>You have to be login to view this page</h2>
             {% endif %}
