@@ -67,7 +67,7 @@ def company_order(request, id):
 
 
 
-#Register company editing made request for workers
+#Register company editing existing objectfor applications for workers
 @login_required
 @company_required
 def edit_order(request, id):
@@ -82,14 +82,14 @@ def edit_order(request, id):
             order.workers_number = form.cleaned_data['workers_number']
             order.start_date = form.cleaned_data['start_date']
             order.end_date = form.cleaned_data['end_date']
-
             order.save()
 
             return HttpResponseRedirect(reverse('order_detail', args=(id,)))
     else:
         default_data = {'country': order.country, 'city': order.city,
                         'address': order.address, 'workers_number': order.workers_number,
-                        'start_date': order.start_date, 'end_date': order.end_date}
+                        'start_date': order.start_date, 'end_date': order.end_date,
+                        'update_date': order.update_date,}
         form = CompanyOrderForm(default_data)
 
     return render(request, 'category/company_form.html', {'form': form, 'order': order})
@@ -242,10 +242,10 @@ def edit_cv(request, id):
 
     return render(request, 'category/cv_form.html', {'form': form, 'cv': cv})
 
-#CV detail view after sybmit Cv form from workers
+#CV detail view after sybmit Cv form from workers: eventula query set for CV(cv = Cv.objects.get(pk=id, worker=request.user))
 @login_required
 def cv_detail(request, id):
-    cv = Cv.objects.get(pk=id, worker=request.user)
+    cv = Cv.objects.get(pk=id)
     workers = Worker.objects.get(pk=cv.worker_id)
     return render(request, 'category/cv_detail.html', {'cv': cv, 'workers': workers})
 
@@ -289,7 +289,7 @@ def thanks(request):
 def workers_cvs(request, id):
     subcat = SubCategory.objects.get(pk=id)
     cv = Cv.objects.all().select_related('worker').filter(job_id=subcat)
-    workers = cv.select_related('worker').filter(main=True)
+    workers = User.objects.select_related('worker')
     return render(request, 'category/worker_cvs.html', {'subcat': subcat, 'cv': cv, 'workers': workers})
 
 

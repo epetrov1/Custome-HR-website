@@ -115,6 +115,7 @@ class Cv(models.Model):
     start_date_3 = models.DateField()
     end_date_3 = models.DateField()
 
+    update_date = models.DateTimeField(auto_now=True)
     submit_date = models.DateField(auto_now_add=True)
     employ = models.BooleanField(default=False)
 
@@ -131,6 +132,7 @@ class CompanyOrder(models.Model):
     workers_number = models.CharField(max_length=10)
     start_date = models.DateField()
     end_date = models.DateField()
+    update_date = models.DateTimeField(auto_now=True)
     submit_date = models.DateField(auto_now_add=True)
     completed = models.BooleanField(default=False)
 
