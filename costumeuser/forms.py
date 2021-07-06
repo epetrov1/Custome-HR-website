@@ -25,7 +25,7 @@ class WorkerSignupForm(SignupForm):
 
 class CompanySignupForm(SignupForm):
     company_name = forms.CharField(label='Company name', max_length=100, required=True)
-    adrress = forms.CharField(label='Address', max_length=250, required=True)
+    address = forms.CharField(label='Address', max_length=250, required=True)
     phone = forms.CharField(label='Mobile phone', max_length=15, required=True)
     def save(self, request):
         user = super(CompanySignupForm, self).save(request)
