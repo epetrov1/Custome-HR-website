@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block headers %}
+<title>{% trans "Latest news" %}</title>
+{% endblock headers %}
+
+{% block content %}
+    <div class="header">
+        <h1>{% trans "Latest news" %}</h1>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            {% for obj in object_list %}
+                <div class="col-lg-3">
+                    <a href="{{ obj.slug }}"><div class="card border-success mb-3">
+                        <img class="card-img-top" src="{{ obj.thumbnail.url | safe }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" style="none">{{ obj.title | safe }}</h5>
+                        </div>
+                    </div></a>
+                    <br>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+{% endblock %}

@@ -51,10 +51,15 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'crispy_forms',
+    'modeltranslation',
+    'rosetta',
+    'django_summernote',
 
     #costume
     'costumeuser',
     'category',
+    'news',
+    'faq',
 ]
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 #User settings
@@ -98,6 +103,7 @@ LOGIN_URL = '/accounts/login/'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -158,8 +164,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
+LOCALE_PATHS = [
+    BASE_DIR, 'locale',
+]
 
-LANGUAGE_CODE = 'en-us'
+
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
@@ -168,6 +178,23 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+#Costume seting for Modeltranslations packeg
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+""" from os.path import join
+LOCALE_PATHS = [
+    join(BASE_DIR, 'i18n_app', 'locale'),
+]
+ """
+
+
+gettext = lambda s: s
+LANGUAGES = (
+    ('en', gettext('English')),
+    ('de', gettext('German')),
+    ('bg', gettext('Bulgarian')),
+
+)
 
 
 # Static files (CSS, JavaScript, Images)
@@ -182,7 +209,8 @@ STATIC_ROOT = 'static_root'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = "media"
 
-
+SUMMERNOTE_THEME = 'bs4'
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
