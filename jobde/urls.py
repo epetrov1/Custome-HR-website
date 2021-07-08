@@ -24,6 +24,7 @@ from costumeuser import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('contact/', views.contact, name='contact'),
     path('accounts/', include('allauth.urls')),
     path('accounts/', include('costumeuser.urls')),
     path('category/', include('category.urls')),
@@ -37,6 +38,7 @@ urlpatterns += i18n_patterns (
     path('accounts/', include('costumeuser.urls')),
     path('accounts/', include('allauth.urls')),
     path('', views.home, name='home'),
+    path('contact/', views.contact, name='contact'),
     path('news/', include('news.urls')),
     path('faq/', include('faq.urls')),
     path('summernote/', include('django_summernote.urls')),

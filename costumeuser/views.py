@@ -106,3 +106,7 @@ def company_update(request, user_id):
 
 def home(request):
     return render(request, 'home.html')
+
+
+def contact(request):
+    return render(request, 'contacts.html')
