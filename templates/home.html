@@ -20,30 +20,30 @@
     </div>
 </header>
 <div class="container">
-    <h2 class="about display-2">About us</h2>
-    <p class="about-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <h2 class="about display-2">{% trans "About us" %}</h2>
+    <p class="about-text">{% trans "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." %}</p>
 </div>
 <br>
 <div class="container">
     <div class="card-group">
         <div class="card text-center" style="border: none;">
-            <img class="card-img-top mx-auto" style="width:300px; height:300px;" src="{% static 'img/cv.jpeg' %}" alt="Card image cap">
+            <img class="card-img-top mx-auto" style="width:250px; height:250px;" src="{% static 'img/cv.jpeg' %}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Applyed CV's we recive</h5>
+                <h5 class="card-title">{% trans "Applyed CV's we recive" %}</h5>
                 <h6 class="counter">1245</h6>
             </div>
         </div>
         <div class="card text-center" style="border: none;">
-            <img class="card-img-top mx-auto" style="width:300px; height:300px;" src="{% static 'img/clock3.jpeg' %}" alt="Card image cap">
+            <img class="card-img-top mx-auto" style="width:250px; height:250px;" src="{% static 'img/clock3.jpeg' %}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Working Hours we deliver</h5>
+                <h5 class="card-title">{% trans "Working Hours we deliver" %}</h5>
                 <h6 class="counter">28216</h6>
             </div>
         </div>
         <div class="card text-center" style="border: none;">
-            <img class="card-img-top mx-auto" style="width:300px; height:300px;" src="{% static 'img/sign.jpeg' %}" alt="Card image cap">
+            <img class="card-img-top mx-auto" style="width:250px; height:250px;" src="{% static 'img/sign.jpeg' %}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Contracts with companys</h5>
+                <h5 class="card-title">{% trans "Contracts with companys" %}</h5>
                 <h6 class="counter">45</h6>
             </div>
         </div>
@@ -53,7 +53,7 @@
 <script>
     $(document).ready(function() {
         $(".counter").counterUp({
-            delay: 20,
+            delay: 30,
             time: 2500
         });
     });

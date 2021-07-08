@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-07 10:49+0300\n"
+"POT-Creation-Date: 2021-07-08 15:03+0300\n"
 "PO-Revision-Date: 2021-07-07 13:28+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -93,8 +93,8 @@ msgstr ""
 
 #: env/lib/python3.8/site-packages/django/core/validators.py:266
 msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
-" hyphens."
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/core/validators.py:275
@@ -279,15 +279,15 @@ msgstr ""
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1288
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
-"HH:MM[:ss[.uuuuuu]][TZ] format."
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1292
 #, python-format
 msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD "
-"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1296
@@ -306,8 +306,8 @@ msgstr ""
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1585
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] "
-"[[HH:]MM:]ss[.uuuuuu] format."
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1588
@@ -466,8 +466,7 @@ msgid "Many-to-many relationship"
 msgstr ""
 
 #. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the
-#. label
+#. characters will prevent the default label_suffix to be appended to the label
 #: env/lib/python3.8/site-packages/django/forms/boundfield.py:150
 msgid ":?.!"
 msgstr ""
@@ -513,8 +512,7 @@ msgstr ""
 
 #: env/lib/python3.8/site-packages/django/forms/fields.py:542
 #, python-format
-msgid ""
-"Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
@@ -621,8 +619,7 @@ msgid "The inline value did not match the parent instance."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/forms/models.py:1193
-msgid ""
-"Select a valid choice. That choice is not one of the available choices."
+msgid "Select a valid choice. That choice is not one of the available choices."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/forms/models.py:1311
@@ -1082,11 +1079,11 @@ msgstr ""
 
 #: env/lib/python3.8/site-packages/django/views/csrf.py:124
 msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
-" including the “Referrer-Policy: no-referrer” header, please remove them. "
-"The CSRF protection requires the “Referer” header to do strict referer "
-"checking. If you’re concerned about privacy, use alternatives like <a "
-"rel=\"noreferrer\" …> for links to third-party sites."
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" …> for links to third-party sites."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/views/csrf.py:132
@@ -1137,8 +1134,8 @@ msgstr ""
 #: env/lib/python3.8/site-packages/django/views/generic/dates.py:594
 #, python-format
 msgid ""
-"Future %(verbose_name_plural)s not available because "
-"%(class_name)s.allow_future is False."
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/views/generic/dates.py:628
@@ -1194,10 +1191,10 @@ msgstr ""
 #: env/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:222
 #, python-format
 msgid ""
-"You are seeing this page because <a "
-"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
-"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
-"and you have not configured any URLs."
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:230
@@ -1224,19 +1221,43 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
+#: env/lib/python3.8/site-packages/django_summernote/views.py:71
+msgid "Only POST method is allowed"
+msgstr ""
+
+#: env/lib/python3.8/site-packages/django_summernote/views.py:86
+msgid "Attachment module is disabled"
+msgstr ""
+
+#: env/lib/python3.8/site-packages/django_summernote/views.py:93
+msgid "Only authenticated users are allowed"
+msgstr ""
+
+#: env/lib/python3.8/site-packages/django_summernote/views.py:99
+msgid "No files were requested"
+msgstr ""
+
+#: env/lib/python3.8/site-packages/django_summernote/views.py:140
+msgid "File size exceeds the limit allowed and cannot be saved"
+msgstr ""
+
+#: env/lib/python3.8/site-packages/django_summernote/views.py:160
+msgid "Failed to save attachment"
+msgstr ""
+
 #: env/lib/python3.8/site-packages/modeltranslation/widgets.py:25
 msgid "None"
 msgstr ""
 
-#: jobde/settings.py:183
+#: jobde/settings.py:193
 msgid "English"
 msgstr ""
 
-#: jobde/settings.py:184
+#: jobde/settings.py:194
 msgid "German"
 msgstr ""
 
-#: jobde/settings.py:185
+#: jobde/settings.py:195
 msgid "Bulgarian"
 msgstr ""
 
@@ -1288,8 +1309,7 @@ msgstr ""
 #: templates/account/email.html:48
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
-"an e-mail address so you can receive notifications, reset your password, "
-"etc."
+"an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
 
 #: templates/account/email.html:53
@@ -1319,7 +1339,8 @@ msgstr ""
 #: templates/account/email/email_confirmation_message.txt:5
 #, python-format
 msgid ""
-"You're receiving this e-mail because user %(user_display)s has given your e-mail address to register an account on %(site_domain)s.\n"
+"You're receiving this e-mail because user %(user_display)s has given your e-"
+"mail address to register an account on %(site_domain)s.\n"
 "\n"
 "To confirm this is correct, go to %(activate_url)s"
 msgstr ""
@@ -1330,8 +1351,10 @@ msgstr ""
 
 #: templates/account/email/password_reset_key_message.txt:4
 msgid ""
-"You're receiving this e-mail because you or someone else has requested a password for your user account.\n"
-"It can be safely ignored if you did not request a password reset. Click the link below to reset your password."
+"You're receiving this e-mail because you or someone else has requested a "
+"password for your user account.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password."
 msgstr ""
 
 #: templates/account/email/password_reset_key_message.txt:9
@@ -1362,13 +1385,12 @@ msgstr ""
 #: templates/account/email_confirm.html:34
 #, python-format
 msgid ""
-"This e-mail confirmation link expired or is invalid. Please <a "
-"href=\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+"This e-mail confirmation link expired or is invalid. Please <a href="
+"\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
 
 #: templates/account/login.html:5 templates/account/login.html:15
-#: templates/account/login.html:26
-#: templates/costumeuser/worker_profile.html:12
+#: templates/account/login.html:26 templates/costumeuser/worker_profile.html:12
 msgid "Sign In"
 msgstr ""
 
@@ -1456,8 +1478,8 @@ msgstr ""
 
 #: templates/account/password_reset.html:23
 msgid ""
-"Forgotten your password? Enter your e-mail address below, and we'll send you"
-" an e-mail allowing you to reset it."
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
 msgstr ""
 
 #: templates/account/password_reset.html:29
@@ -1482,8 +1504,8 @@ msgstr ""
 #, python-format
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
-"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password "
-"reset</a>."
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
 msgstr ""
 
 #: templates/account/password_reset_from_key.html:26
@@ -1495,8 +1517,7 @@ msgstr ""
 msgid "Your password is now changed."
 msgstr ""
 
-#: templates/account/password_set.html:6
-#: templates/account/password_set.html:16
+#: templates/account/password_set.html:6 templates/account/password_set.html:16
 #: templates/account/password_set.html:21
 msgid "Set Password"
 msgstr ""
@@ -1554,22 +1575,233 @@ msgstr ""
 #: templates/account/verified_email_required.html:19
 msgid ""
 "This part of the site requires us to verify that\n"
-"                you are who you claim to be. For this purpose, we require that you\n"
+"                you are who you claim to be. For this purpose, we require "
+"that you\n"
 "                verify ownership of your e-mail address. "
 msgstr ""
 
 #: templates/account/verified_email_required.html:23
 msgid ""
 "We have sent an e-mail to you for\n"
-"                verification. Please click on the link inside this e-mail. Please\n"
+"                verification. Please click on the link inside this e-mail. "
+"Please\n"
 "                contact us if you do not receive it within a few minutes."
 msgstr ""
 
 #: templates/account/verified_email_required.html:27
 #, python-format
 msgid ""
-"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your "
-"e-mail address</a>."
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
+"mail address</a>."
+msgstr ""
+
+#: templates/category/category_list.html:9
+msgid "All niches and job positions we work with."
+msgstr ""
+
+#: templates/category/category_list.html:10 templates/home.html:24
+msgid ""
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+"Lorem Ipsum has been the industry's standard dummy text ever since the "
+"1500s, when an unknown printer took a galley of type and scrambled it to "
+"make a type specimen book. It has survived not only five centuries, but also "
+"the leap into electronic typesetting, remaining essentially unchanged. It "
+"was popularised in the 1960s with the release of Letraset sheets containing "
+"Lorem Ipsum passages, and more recently with desktop publishing software "
+"like Aldus PageMaker including versions of Lorem Ipsum."
+msgstr ""
+
+#: templates/category/category_list.html:25
+#: templates/category/category_list.html:35
+msgid "Apply for job"
+msgstr ""
+
+#: templates/category/category_list.html:29
+#: templates/category/category_list.html:40
+msgid "Get offer for workers"
+msgstr ""
+
+#: templates/category/category_list.html:44
+msgid "Availables workers"
+msgstr ""
+
+#: templates/category/company_form.html:5
+#: templates/category/company_form.html:17
+msgid "you are about to send application for"
+msgstr ""
+
+#: templates/category/company_form.html:37
+msgid "You have to be register as Company to take offer for"
+msgstr ""
+
+#: templates/category/cv_detail.html:6 templates/category/cv_detail.html:19
+msgid "CV you apply for"
+msgstr ""
+
+#: templates/category/cv_detail.html:27
+msgid "Profile"
+msgstr ""
+
+#: templates/category/cv_detail.html:28
+msgid "Last updated on"
+msgstr ""
+
+#: templates/category/cv_detail.html:30
+msgid "First Name"
+msgstr ""
+
+#: templates/category/cv_detail.html:31
+msgid "Last Name"
+msgstr ""
+
+#: templates/category/cv_detail.html:32
+msgid "Email"
+msgstr ""
+
+#: templates/category/cv_detail.html:33
+msgid "Phone"
+msgstr ""
+
+#: templates/category/cv_detail.html:38
+msgid "CV generated by"
+msgstr ""
+
+#: templates/category/cv_detail.html:41
+msgid "Birth day"
+msgstr ""
+
+#: templates/category/cv_detail.html:42
+msgid "Gender"
+msgstr ""
+
+#: templates/category/cv_detail.html:43
+msgid "Driving License"
+msgstr ""
+
+#: templates/category/cv_detail.html:44
+msgid "Ready to strat work"
+msgstr ""
+
+#: templates/category/cv_detail.html:45
+msgid "Expected salary"
+msgstr ""
+
+#: templates/category/cv_detail.html:48
+msgid "Languages"
+msgstr ""
+
+#: templates/category/cv_detail.html:50
+msgid "First"
+msgstr ""
+
+#: templates/category/cv_detail.html:51 templates/category/cv_detail.html:53
+#: templates/category/cv_detail.html:55
+msgid "Level"
+msgstr ""
+
+#: templates/category/cv_detail.html:52
+msgid "Second"
+msgstr ""
+
+#: templates/category/cv_detail.html:54
+msgid "Third"
+msgstr ""
+
+#: templates/category/cv_detail.html:59 templates/category/cv_detail.html:67
+#: templates/category/cv_detail.html:75
+msgid "Country"
+msgstr ""
+
+#: templates/category/cv_detail.html:60 templates/category/cv_detail.html:68
+#: templates/category/cv_detail.html:76
+msgid "Company"
+msgstr ""
+
+#: templates/category/cv_detail.html:61 templates/category/cv_detail.html:69
+#: templates/category/cv_detail.html:77
+msgid "Position"
+msgstr ""
+
+#: templates/category/cv_detail.html:62 templates/category/cv_detail.html:70
+#: templates/category/cv_detail.html:78
+msgid "Start date"
+msgstr ""
+
+#: templates/category/cv_detail.html:63 templates/category/cv_detail.html:71
+#: templates/category/cv_detail.html:79
+msgid "End date"
+msgstr ""
+
+#: templates/category/cv_detail.html:84 templates/category/cv_detail.html:90
+msgid "Certificate"
+msgstr ""
+
+#: templates/category/cv_list.html:12
+msgid ""
+"This is CV's you apply to us. Pleace keep you personal information up to "
+"date."
+msgstr ""
+
+#: templates/category/cv_list.html:16
+msgid "Date you apply- {{ c.submit_date }}"
+msgstr ""
+
+#: templates/category/cv_list.html:19
+msgid "{{ c.job }} - Position you apply"
+msgstr ""
+
+#: templates/category/cv_list.html:20
+msgid "Preview"
+msgstr ""
+
+#: templates/category/cv_list.html:21
+msgid "Update"
+msgstr ""
+
+#: templates/category/order_detail.html:5
+#, python-format
+msgid "%(comp.company_name)s- your application for: %(order.job_titlle)s\" "
+msgstr ""
+
+#: templates/category/order_detail.html:16
+#, python-format
+msgid "%(comp.company_name)s- your application for: %(order.job_titlle)s"
+msgstr ""
+
+#: templates/category/order_detail.html:17
+msgid "Last updated on {{ order.update_date }}"
+msgstr ""
+
+#: templates/category/order_detail.html:20
+msgid "Your order"
+msgstr ""
+
+#: templates/category/order_detail.html:21
+msgid "Coutntry you need employers"
+msgstr ""
+
+#: templates/category/order_detail.html:22
+msgid "City you need employers"
+msgstr ""
+
+#: templates/category/order_detail.html:23
+msgid "Address employers have to work"
+msgstr ""
+
+#: templates/category/order_detail.html:24
+msgid "Quantity employers you need"
+msgstr ""
+
+#: templates/category/order_detail.html:25
+msgid "Start date for employers"
+msgstr ""
+
+#: templates/category/order_detail.html:26
+msgid "End date forLast date for employers"
+msgstr ""
+
+#: templates/category/order_detail.html:28
+msgid "Edit order"
 msgstr ""
 
 #: templates/costumeuser/company_signup.html:12
@@ -1580,6 +1812,10 @@ msgstr ""
 msgid "Sign Up as Employee"
 msgstr ""
 
+#: templates/faq/faq_list.html:4 templates/faq/faq_list.html:9
+msgid "Friquently Asked Questions"
+msgstr ""
+
 #: templates/home.html:16
 msgid ""
 "We are a liders in Humanresources. We provide best services for all "
@@ -1587,3 +1823,51 @@ msgid ""
 msgstr ""
 "Wir sind führend im Personalwesen. Wir bieten beste Dienstleistungen für "
 "alle Arbeitnehmer und Arbeitgeber"
+
+#: templates/home.html:23
+msgid "About us"
+msgstr ""
+
+#: templates/home.html:32
+msgid "Applyed CV's we recive"
+msgstr ""
+
+#: templates/home.html:39
+msgid "Working Hours we deliver"
+msgstr ""
+
+#: templates/home.html:46
+msgid "Contracts with companys"
+msgstr ""
+
+#: templates/nav.html:13
+msgid "Job-Positions"
+msgstr ""
+
+#: templates/nav.html:16
+msgid "News"
+msgstr ""
+
+#: templates/nav.html:19
+msgid "FAQ"
+msgstr ""
+
+#: templates/nav.html:22
+msgid "Contact"
+msgstr ""
+
+#: templates/nav.html:31
+msgid "Logout"
+msgstr ""
+
+#: templates/nav.html:35
+msgid "Login In"
+msgstr ""
+
+#: templates/nav.html:38
+msgid "Register"
+msgstr ""
+
+#: templates/news/news_list.html:4 templates/news/news_list.html:9
+msgid "Latest news"
+msgstr ""

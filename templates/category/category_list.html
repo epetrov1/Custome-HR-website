@@ -1,12 +1,13 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load static %}
 
 {% block content %}
 <br>
 <br>
 <div class="container">
-    <h1 style="color: white; text-align: center">All niches and job positions we work with.</h1>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <h1 style="color: white; text-align: center">{% trans "All niches and job positions we work with." %}</h1>
+    <p>{% trans "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." %}</p>
     {% for cat in category %}
         <div class="btn-group">
             <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' cat.id %}"><h2><span class="badge" style="color:#6E0D25">{{ cat.name }}</span></h2></a>
@@ -21,26 +22,26 @@
                         {% if user.is_anonymous %}
                         <div class="btn-group-vertical">
                             <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_cv' subc.id %}">Apply for job</a>
+                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_cv' subc.id %}">{% trans "Apply for job" %}</a>
                             </button>
                             <br>
                             <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_apply' subc.id %}">Get offer for workers</a>
+                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_apply' subc.id %}">{% trans "Get offer for workers" %}</a>
                             </button>
                         </div>
                         {% endif %}
                         {% if user.is_authenticated and user.is_worker %}
                             <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_cv' subc.id %}">Apply for job</a>
+                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_cv' subc.id %}">{% trans "Apply for job" %}</a>
                             </button>
                         {% elif user.is_authenticated and user.is_company %}
                         <div class="btn-group-vertical">
                             <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_apply' subc.id %}">Get offer for workers</a>
+                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_apply' subc.id %}">{% trans "Get offer for workers" %}</a>
                             </button>
                             <br>
                             <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'workers_cvs' subc.id %}">Availables workers {{ num_cv }}</a>
+                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'workers_cvs' subc.id %}">{% trans "Availables workers" %}</a>
                             </button>
                         </div>
                         {% endif %}
@@ -49,74 +50,6 @@
             {% endfor %}
           
         </div>
-        {% comment %} <div class="card-group">
-            {% for subc in subcategory %}
-                <div class="card text-center" style="border: none;">
-                    <img class="card-img-top mx-auto" style="width:200px; height:200px;" src="{{ subc.img.url }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ subc.name }}</h5>
-                        {% if user.is_anonymous %}
-                            <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_cv' subc.id %}">Apply for job</a>
-                            </button><br>
-                            <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_apply' subc.id %}">Get offer for workers</a>
-                            </button>
-                        {% endif %}
-                        {% if user.is_authenticated and user.is_worker %}
-                            <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_cv' subc.id %}">Apply for job</a>
-                            </button>
-                        {% elif user.is_authenticated and user.is_company %}
-                            <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_apply' subc.id %}">Get offer for workers</a>
-                            </button>
-                            <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'workers_cvs' subc.id %}">Availables workers {{ num_cv }}</a>
-                            </button>
-                        {% endif %}
-                    </div>
-                </div>
-            
-            {% endfor %}
-        </div> {% endcomment %}
-
-
-
-    {% comment %} {% for subcat in subcategory %}
-        <h2><span class="badge bg-info">{{ subcat.category }}</span></h2>
-        <div class="card-group">
-            {% for subc in subcategory %}
-                <div class="card text-center" style="border: none;">
-                    <img class="card-img-top mx-auto" style="width:200px; height:200px;" src="{{ subc.img.url }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ subc.name }}</h5>
-                        {% if user.is_anonymous %}
-                            <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_cv' subc.id %}">Apply for job</a>
-                            </button><br>
-                            <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_apply' subc.id %}">Get offer for workers</a>
-                            </button>
-                        {% endif %}
-                        {% if user.is_authenticated and user.is_worker %}
-                            <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_cv' subc.id %}">Apply for job</a>
-                            </button>
-                        {% elif user.is_authenticated and user.is_company %}
-                            <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_apply' subc.id %}">Get offer for workers</a>
-                            </button>
-                            <button type="button" class="btn btn-success">
-                                <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'workers_cvs' subc.id %}">Availables workers {{ num_cv }}</a>
-                            </button>
-                        {% endif %}
-                    </div>
-                </div>
-            {% endfor %}
-          
-        </div>
-    {% endfor %}   {% endcomment %}
 </div>
 
 {% endblock content %}

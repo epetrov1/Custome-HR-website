@@ -1,27 +1,17 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load static %}
-
-
+{% block headers %}
+<title>{% trans "All applyed CV's for" %}</title>
+{% endblock headers %}
 {% block content %}
 <br>
 <br>     
-{% comment %}     {% for c in cv %}
-        {% if c.employ == False %}
-        
-            <img class="thumbnail" style="width:25px; height:25px;" src="{{ c.worker.image.url }}">
-        {% endif %}
 
-    {% endfor %}
-            {% for work in workers %}
-                <h2>{{ work.first_name }}</h2>
-                <h3>{{ work.last_name }}</h3>
-                <h3>{{ work.user.email }}</h3>
-                <img src="{{ work.image.url }}" style="width:125px; height:125px;" alt="Card image cap">
-            {% endfor %} {% endcomment %}
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
-            <h1> All applyed CV's for {{ subcat }}</h1>
+            <h1>{% trans "All applyed CV's for" %}{{ subcat }}</h1>
             <br>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 {% for c in cv %}

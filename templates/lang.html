@@ -1,0 +1,10 @@
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+<ul class="list-group list-group-horizontal" style="list-group-active-color">
+{% for lang in languages %}
+    <li class="list-group-item">
+        <a style="text-decoration: none; font-weight:20"href="/{{ lang.code }}/">{{ lang.name_local }}</a>
+    </li>
+{% endfor %}
+</ul>
