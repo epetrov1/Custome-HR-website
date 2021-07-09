@@ -2,7 +2,7 @@
 {% load static %}
 {% load i18n %}
 {% block headers %}
-<title>{% blocktrans %}{{ comp.company_name }}- your application for: {{ order.job_titlle }}" {% endblocktrans %}</title>
+<title>{{ comp.company_name }}- {% trans "your application for:" %} {{ order.job_titlle }}</title>
 {% endblock headers %}
 
 {% block content %}
@@ -13,19 +13,19 @@
         <br>
             <div class="card">
                 <div class="card-header">
-                    <h1>{% blocktrans %}{{ comp.company_name }}- your application for: {{ order.job_titlle }}{% endblocktrans %}</h1>
+                    <h1>{{ comp.company_name }}- {% trans "your application for:" %} {{ order.job_titlle }}</h1>
                     <p>{% trans "Last updated on" %} {{ order.update_date }}</p>
                 </div>
                 <div class="card-body">
                     <h3 class="card-title">{% trans "Your order" %}</h3>
-                    <h5 class="card-text"><span class="badge bg-success">{{ order.country }}</span> - {% trans "Coutntry you need employees" %}</h5>
+                    <h5 class="card-text"><span class="badge bg-success">{{ order.country }}</span> - {% trans "Country you need employees" %}</h5>
                     <h5 class="card-text"><span class="badge bg-success">{{ order.city }}</span> - {% trans "City you need employees" %}</h5>
                     <h5 class="card-text"><span class="badge bg-success">{{ order.address }}</span> - {% trans "Address employees have to work" %}</h5>
                     <h5 class="card-text"><span class="badge bg-success">{{ order.workers_number }}</span> - {% trans "Quantity employers you need" %}</h5>
                     <h5 class="card-text"><span class="badge bg-success">{{ order.start_date }}</span> - {% trans "Start date for employers" %}</h5>
                     <h5 class="card-text"><span class="badge bg-success">{{ order.end_date }}</span> - {% trans "Last date for employers" %}</h5>
 
-                    <a href="{% url 'order_edit' order.id %}" class="btn btn-success">{% trans "Edit order" %}</a>
+                    <a href="{% url 'order_edit' order.id %}" class="btn btn-success">{% trans "Edit" %}</a>
                 </div>
             </div>
         </div>

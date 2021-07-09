@@ -17,18 +17,18 @@
         <div class="card-group">
           <div class="card text-center">
             <div class="card-header">
-              <h4>Looking for employers</h4>
+              <h4>{% trans "Looking for employers" %}</h4>
             </div>
             <div class="card-body">
-              <a href="{% url 'worker_signup_view' %}" class="btn btn-primary">Worker</a>
+              <a href="{% url 'worker_signup_view' %}" class="btn btn-primary">{% trans "Worker" %}</a>
             </div>
           </div>
           <div class="card text-center">
             <div class="card-header">
-              <h4>Looking for employees</h4>
+              <h4>{% trans "Looking for employees" %}</h4>
             </div>
             <div class="card-body">
-              <a href="{% url 'company_signup_view' %}" class="btn btn-primary">Company</a>
+              <a href="{% url 'company_signup_view' %}" class="btn btn-primary">{% trans "Company" %}</a>
             </div>
           </div>
         </div>

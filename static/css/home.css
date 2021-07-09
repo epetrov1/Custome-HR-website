@@ -2,16 +2,14 @@
     height: 90vh;
     min-height: 400px;
     background-image: url(../img/contract.jpeg);
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .main-header { 
-    display:flex;
-    padding-top: 230px;
-    padding-left: 600px;
-    padding-right: 40px;
-    text-align: right;
+    padding-top: 300px;
+    text-align: center;
     color: black;
     font-family: 'Pattaya', sans-serif;
 }

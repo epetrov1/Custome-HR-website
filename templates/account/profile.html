@@ -12,34 +12,34 @@
             {% if user.is_authenticated and user.is_worker %}
                 <img class="img-thumbnail" src="{{ user.worker.image.url }}">
                 <div class="info">
-                    <h2><span class="badge rounded-pill bg-success">Username:</span> {{ user.username }}</h2>
-                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">Email:</span> {{ user.email }}</b></p>
-                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">First Name:</span> {{ user.worker.first_name }}</b></p>
-                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">Last Name:</span> {{ user.worker.last_name }}</b></p>
-                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">Mobile:</span> {{ user.worker.phone }}</b></p>
+                    <h2><span class="badge rounded-pill bg-success">{% trans "Username:" %}</span> {{ user.username }}</h2>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">{% trans "Email:" %}</span> {{ user.email }}</b></p>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">{% trans "First Name:" %}</span> {{ user.worker.first_name }}</b></p>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">{% trans "Last Name:" %}</span> {{ user.worker.last_name }}</b></p>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">{% trans "Mobile:" %}</span> {{ user.worker.phone }}</b></p>
                     
                 </div>
-                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_profile_edit' user.id %}">Edit profile information</a>
+                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_profile_edit' user.id %}">{% trans "Edit profile information" %}</a>
                 <br>
-                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' 1 %}">Apply for a job</a>
+                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' 1 %}">{% trans "Apply for job" %}</a>
                 <br />
-                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'cv_list' %}">My Cv's</a>
+                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'cv_list' %}">{% trans "My Cv's" %}</a>
                 <br />
             {% elif user.is_authenticated and user.is_company %}
                 <img class="img-thumbnail" src="{{ user.company.image.url }}">
                 <div class="info">
-                    <h2><span class="badge rounded-pill bg-success">Username:</span> {{ user.username }}</h2>
-                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">Email:</span> {{ user.email }}</b></p>
-                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">Company name:</span> {{ user.company.company_name }}</b></p>
-                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">Address:</span> {{ user.company.address }}</b></p>
-                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">Mobile:</span> {{ user.company.phone }}</b></p>
+                    <h2><span class="badge rounded-pill bg-success">{% trans "Username:" %}</span> {{ user.username }}</h2>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">{% trans "Email:" %}</span> {{ user.email }}</b></p>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">{% trans "Company name:" %}</span> {{ user.company.company_name }}</b></p>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">{% trans "Address:" %}</span> {{ user.company.address }}</b></p>
+                    <p class="text-scondary"><b><span class="badge rounded-pill bg-success">{% trans "Mobile:" %}</span> {{ user.company.phone }}</b></p>
                     
                 </div>
-                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_profile_edit' user.id %}">Edit company information</a>
+                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_profile_edit' user.id %}">{% trans "Edit company information" %}</a>
                 <br>
-                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' 1 %}">Find employees</a>
+                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' 1 %}">{% trans "Find employees" %}</a>
                 <br>
-                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'order_list' %}">My orders</a>
+                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'order_list' %}">{% trans "My orders" %}</a>
             {% else %}
                 <h2>You have to be login to view this page</h2>
             {% endif %}

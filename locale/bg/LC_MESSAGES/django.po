@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-08 17:34+0300\n"
-"PO-Revision-Date: 2021-07-08 14:34+0000\n"
+"POT-Creation-Date: 2021-07-09 23:19+0300\n"
+"PO-Revision-Date: 2021-07-09 20:18+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,11 +19,333 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.6\n"
 
+#: category/models.py:30
+msgid "Femail"
+msgstr "Жена"
+
+#: category/models.py:31
+msgid "Male"
+msgstr "Мъж"
+
+#: category/models.py:35
+#: env/lib/python3.8/site-packages/django/forms/widgets.py:715
+msgid "Yes"
+msgstr "Да"
+
+#: category/models.py:36
+#: env/lib/python3.8/site-packages/django/forms/widgets.py:716
+msgid "No"
+msgstr "Не"
+
+#: category/models.py:39 jobde/settings.py:193
+msgid "English"
+msgstr "Английски"
+
+#: category/models.py:40 jobde/settings.py:194
+msgid "German"
+msgstr "Немски"
+
+#: category/models.py:41
+msgid "French"
+msgstr "Френски"
+
+#: category/models.py:42
+msgid "Italian"
+msgstr "Италиански"
+
+#: category/models.py:43
+msgid "Spanish"
+msgstr "Испански"
+
+#: category/models.py:44
+msgid "Turkish"
+msgstr "Турски"
+
+#: category/models.py:45
+msgid "Russian"
+msgstr "Руски"
+
+#: category/models.py:49
+msgid "Basic"
+msgstr "Основно"
+
+#: category/models.py:50
+msgid "Medium"
+msgstr "Средно"
+
+#: category/models.py:51
+msgid "Fluent"
+msgstr "Отлично"
+
+#: category/models.py:55
+msgid "UK"
+msgstr "Англия"
+
+#: category/models.py:56
+msgid "Germany"
+msgstr "Германия"
+
+#: category/models.py:57
+msgid "France"
+msgstr "Франция"
+
+#: category/models.py:58
+msgid "Italy"
+msgstr "Италия"
+
+#: category/models.py:59
+msgid "Netherlands"
+msgstr "Холандия"
+
+#: category/models.py:60
+msgid "Switzerland"
+msgstr "Швейцария"
+
+#: category/models.py:61
+msgid "Poland"
+msgstr "Полша"
+
+#: category/models.py:62
+msgid "Greece"
+msgstr "Гърция"
+
+#: category/models.py:63
+msgid "Sweden"
+msgstr "Швеция"
+
+#: category/models.py:64
+msgid "Bulgaria"
+msgstr "България"
+
+#: category/models.py:65
+msgid "Belgium"
+msgstr "Белгия"
+
+#: category/models.py:66
+msgid "Austria"
+msgstr "Австрия"
+
+#: category/models.py:67
+msgid "Hungary"
+msgstr "Унгария"
+
+#: category/models.py:68
+msgid "Denmark"
+msgstr "Дания"
+
+#: category/models.py:69
+msgid "Finland"
+msgstr "Финландия"
+
+#: category/models.py:70
+msgid "Norway"
+msgstr "Норвегия"
+
+#: category/models.py:71
+msgid "Czechia"
+msgstr "Чехия"
+
+#: category/models.py:72
+msgid "Irland"
+msgstr "Ирландия"
+
+#: category/models.py:73
+msgid "Romania"
+msgstr "Румъния"
+
+#: category/models.py:74
+msgid "Cyprus"
+msgstr "Кипър"
+
+#: category/models.py:75
+msgid "Slovenia"
+msgstr "Словакия"
+
+#: category/models.py:76
+msgid "Lithuania"
+msgstr "Литва"
+
+#: category/models.py:77
+msgid "Latvia"
+msgstr "Латвия"
+
+#: category/models.py:78
+msgid "Russian Federation"
+msgstr "Руска Федерация"
+
+#: category/models.py:79
+msgid "Not Europe"
+msgstr "Извън Европа"
+
+#: category/models.py:83
+msgid "Position I apply"
+msgstr "Която кандидатсвам"
+
+#: category/models.py:84
+msgid "Different"
+msgstr "Различна"
+
+#: category/models.py:89
+msgid "birth_day"
+msgstr "Дата на раждане"
+
+#: category/models.py:90
+msgid "gender"
+msgstr "Пол"
+
+#: category/models.py:91
+msgid "driving_license"
+msgstr "Шофьорска книжка"
+
+#: category/models.py:92
+msgid "first_lang"
+msgstr "Първи език"
+
+#: category/models.py:93
+msgid "first_lang_level"
+msgstr "Първи език ниво"
+
+#: category/models.py:94
+msgid "second_lang"
+msgstr "Втори език"
+
+#: category/models.py:95
+msgid "second_lang_level"
+msgstr "Втори език ниво"
+
+#: category/models.py:96
+msgid "third_lang"
+msgstr "Трети език"
+
+#: category/models.py:97
+msgid "third_lang_level"
+msgstr "Трети език ниво"
+
+#: category/models.py:98
+msgid "ready_to_start"
+msgstr "Готови да започнете работа от"
+
+#: category/models.py:99
+msgid "expectet_salary"
+msgstr "Очаквана заплата в евро"
+
+#: category/models.py:100
+msgid "sertificate_1"
+msgstr "Сертификат(не задължително)"
+
+#: category/models.py:101
+msgid "sertificate_2"
+msgstr "Сертификат(не задължително)"
+
+#: category/models.py:104
+msgid "country_1"
+msgstr "Страна в която сте работили"
+
+#: category/models.py:105
+msgid "company_name_1"
+msgstr "Име на компанията"
+
+#: category/models.py:106
+msgid "position_1"
+msgstr "Позиции"
+
+#: category/models.py:107
+msgid "start_date_1"
+msgstr "Започнахте на:"
+
+#: category/models.py:108
+msgid "end_date_1"
+msgstr "Прекъснахте на:"
+
+#: category/models.py:109
+msgid "country_2"
+msgstr "Страна в която сте работили"
+
+#: category/models.py:110
+msgid "company_name_2"
+msgstr "Име на компанията"
+
+#: category/models.py:111
+msgid "position_2"
+msgstr "Позиции"
+
+#: category/models.py:112
+msgid "start_date_2"
+msgstr "Започнахте на:"
+
+#: category/models.py:113
+msgid "end_date_2"
+msgstr "Прекъснахте на:"
+
+#: category/models.py:114
+msgid "country_3"
+msgstr "Страна в която сте работили"
+
+#: category/models.py:115
+msgid "company_name_3"
+msgstr "Име на компанията"
+
+#: category/models.py:116
+msgid "position_3"
+msgstr "Позиции"
+
+#: category/models.py:117
+msgid "start_date_3"
+msgstr "Започнахте на:"
+
+#: category/models.py:118
+msgid "end_date_3"
+msgstr "Прекъснахте на:"
+
+#: category/models.py:131
+msgid "country"
+msgstr "Страна за работа"
+
+#: category/models.py:132
+msgid "city"
+msgstr "Град за работа"
+
+#: category/models.py:133
+msgid "address_order"
+msgstr "Адрес на работа"
+
+#: category/models.py:134
+msgid "workers_number"
+msgstr "Количество работници"
+
+#: category/models.py:135
+msgid "start_date"
+msgstr "С начална дата"
+
+#: category/models.py:136
+msgid "end_date"
+msgstr "С крайна дата"
+
+#: costumeuser/models.py:17
+msgid "first_name"
+msgstr "Първо име"
+
+#: costumeuser/models.py:18
+msgid "last_name"
+msgstr "Фамилия"
+
+#: costumeuser/models.py:19 costumeuser/models.py:30
+msgid "phone"
+msgstr "Мобилен телфон"
+
+#: costumeuser/models.py:28
+msgid "company_name"
+msgstr "Име на фирмата"
+
+#: costumeuser/models.py:29
+msgid "address"
+msgstr "Адрес на фирмата"
+
 #: env/lib/python3.8/site-packages/crispy_forms/tests/test_form_helper.py:129
 #: env/lib/python3.8/site-packages/crispy_forms/tests/test_form_helper.py:139
 #: env/lib/python3.8/site-packages/django/forms/fields.py:54
 msgid "This field is required."
-msgstr ""
+msgstr "Това поле е задължително"
 
 #: env/lib/python3.8/site-packages/crispy_forms/tests/test_layout.py:392
 msgid "i18n text"
@@ -36,7 +358,7 @@ msgstr ""
 #: env/lib/python3.8/site-packages/crispy_forms/tests/test_layout_objects.py:142
 #: env/lib/python3.8/site-packages/django/core/validators.py:22
 msgid "Enter a valid value."
-msgstr ""
+msgstr "Въведете валидни данни"
 
 #: env/lib/python3.8/site-packages/django/contrib/messages/apps.py:7
 msgid "Messages"
@@ -274,7 +596,7 @@ msgstr ""
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1150
 msgid "Date (without time)"
-msgstr ""
+msgstr "Дата"
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1288
 #, python-format
@@ -292,7 +614,7 @@ msgstr ""
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1296
 msgid "Date (with time)"
-msgstr ""
+msgstr "Дата и Време"
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1444
 #, python-format
@@ -316,7 +638,7 @@ msgstr ""
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1638
 msgid "Email address"
-msgstr ""
+msgstr "Email"
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1661
 msgid "File path"
@@ -424,11 +746,11 @@ msgstr ""
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/files.py:225
 msgid "File"
-msgstr ""
+msgstr "Файл(jpg)"
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/files.py:373
 msgid "Image"
-msgstr ""
+msgstr "Снимка"
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/json.py:18
 msgid "A JSON object"
@@ -526,7 +848,7 @@ msgstr ""
 msgid ""
 "Upload a valid image. The file you uploaded was either not an image or a "
 "corrupted image."
-msgstr ""
+msgstr "Въведете снимка. Използвахте неправилен формат!"
 
 #: env/lib/python3.8/site-packages/django/forms/fields.py:768
 #: env/lib/python3.8/site-packages/django/forms/fields.py:858
@@ -650,14 +972,6 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: env/lib/python3.8/site-packages/django/forms/widgets.py:715
-msgid "Yes"
-msgstr ""
-
-#: env/lib/python3.8/site-packages/django/forms/widgets.py:716
-msgid "No"
-msgstr ""
-
 #. Translators: Please do not add spaces around commas.
 #: env/lib/python3.8/site-packages/django/template/defaultfilters.py:805
 msgid "yes,no,maybe"
@@ -778,99 +1092,99 @@ msgstr ""
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:14
 msgid "January"
-msgstr ""
+msgstr "Януари"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:14
 msgid "February"
-msgstr ""
+msgstr "Февруари"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:14
 msgid "March"
-msgstr ""
+msgstr "Март"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:14
 msgid "April"
-msgstr ""
+msgstr "Април"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:14
 msgid "May"
-msgstr ""
+msgstr "Май"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:14
 msgid "June"
-msgstr ""
+msgstr "Юни"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:15
 msgid "July"
-msgstr ""
+msgstr "Юли"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:15
 msgid "August"
-msgstr ""
+msgstr "Август"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:15
 msgid "September"
-msgstr ""
+msgstr "Септември"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:15
 msgid "October"
-msgstr ""
+msgstr "Октомври"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:15
 msgid "November"
-msgstr ""
+msgstr "Ноември"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:16
 msgid "December"
-msgstr ""
+msgstr "Декември"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:19
 msgid "jan"
-msgstr ""
+msgstr "Ян"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:19
 msgid "feb"
-msgstr ""
+msgstr "Фев"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:19
 msgid "mar"
-msgstr ""
+msgstr "Март"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:19
 msgid "apr"
-msgstr ""
+msgstr "Апр"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:19
 msgid "may"
-msgstr ""
+msgstr "Май"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:19
 msgid "jun"
-msgstr ""
+msgstr "Юни"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:20
 msgid "jul"
-msgstr ""
+msgstr "Юли"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:20
 msgid "aug"
-msgstr ""
+msgstr "Авг"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:20
 msgid "sep"
-msgstr ""
+msgstr "Септ"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:20
 msgid "oct"
-msgstr ""
+msgstr "Окт"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:20
 msgid "nov"
-msgstr ""
+msgstr "Ноем"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:20
 msgid "dec"
-msgstr ""
+msgstr "Дек"
 
 #: env/lib/python3.8/site-packages/django/utils/dates.py:23
 msgctxt "abbrev. month"
@@ -1249,14 +1563,6 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: jobde/settings.py:193
-msgid "English"
-msgstr ""
-
-#: jobde/settings.py:194
-msgid "German"
-msgstr ""
-
 #: jobde/settings.py:195
 msgid "Bulgarian"
 msgstr "Български"
@@ -1364,12 +1670,12 @@ msgstr ""
 
 #: templates/account/email/password_reset_key_subject.txt:3
 msgid "Password Reset E-mail"
-msgstr ""
+msgstr "Въведете e-mail"
 
 #: templates/account/email_confirm.html:6
 #: templates/account/email_confirm.html:17
 msgid "Confirm E-mail Address"
-msgstr ""
+msgstr "Потвърдете e-mail"
 
 #: templates/account/email_confirm.html:23
 #, python-format
@@ -1380,7 +1686,7 @@ msgstr ""
 
 #: templates/account/email_confirm.html:27
 msgid "Confirm"
-msgstr ""
+msgstr "Потвърдете"
 
 #: templates/account/email_confirm.html:34
 #, python-format
@@ -1392,7 +1698,7 @@ msgstr ""
 #: templates/account/login.html:5 templates/account/login.html:15
 #: templates/account/login.html:26 templates/costumeuser/worker_profile.html:12
 msgid "Sign In"
-msgstr ""
+msgstr "Вход"
 
 #: templates/account/login.html:16
 #, python-format
@@ -1400,56 +1706,58 @@ msgid ""
 "If you have not created an account yet, then please\n"
 "        <a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
+"Ако нямате регистрация още. Може да направите от  <a href=\"%(signup_url)s"
+"\">Тук.</a>"
 
 #: templates/account/login.html:24 templates/account/password_change.html:22
 msgid "Forgot Password?"
-msgstr ""
+msgstr "Забравена парола?"
 
 #: templates/account/logout.html:5 templates/account/logout.html:15
 #: templates/account/logout.html:24
 msgid "Sign Out"
-msgstr ""
+msgstr "Изход"
 
 #: templates/account/logout.html:17
 msgid "Are you sure you want to sign out?"
-msgstr ""
+msgstr "Сигурни ли сте че искате да излезете от регистрацията си?"
 
 #: templates/account/messages/cannot_delete_primary_email.txt:2
 #, python-format
 msgid "You cannot remove your primary e-mail address (%(email)s)."
-msgstr ""
+msgstr "Не можете (%(email)s)."
 
 #: templates/account/messages/email_confirmation_sent.txt:2
 #, python-format
 msgid "Confirmation e-mail sent to %(email)s."
-msgstr ""
+msgstr "Изпратен е e-mail за потвърждаване на %(email)s."
 
 #: templates/account/messages/email_confirmed.txt:2
 #, python-format
 msgid "You have confirmed %(email)s."
-msgstr ""
+msgstr "Вие потвърдихте  %(email)s."
 
 #: templates/account/messages/email_deleted.txt:2
 #, python-format
 msgid "Removed e-mail address %(email)s."
-msgstr ""
+msgstr "Изтрит майл %(email)s."
 
 #: templates/account/messages/logged_in.txt:4
 #, python-format
 msgid "Successfully signed in as %(name)s."
-msgstr ""
+msgstr "Успешно регистриран като %(name)s."
 
 #: templates/account/messages/logged_out.txt:2
 msgid "You have signed out."
-msgstr ""
+msgstr "Вие излязохте от акаунта си"
 
 #: templates/account/messages/password_changed.txt:2
 msgid "Password successfully changed."
-msgstr ""
+msgstr "Паролата ви е успешно сменена"
 
 #: templates/account/messages/password_set.txt:2
 msgid "Password successfully set."
-msgstr ""
+msgstr "Успешно запазена парола"
 
 #: templates/account/messages/primary_email_set.txt:2
 msgid "Primary e-mail address set."
@@ -1467,34 +1775,36 @@ msgstr ""
 #: templates/account/password_reset_from_key_done.html:4
 #: templates/account/password_reset_from_key_done.html:14
 msgid "Change Password"
-msgstr ""
+msgstr "Промени парола"
 
 #: templates/account/password_reset.html:7
 #: templates/account/password_reset.html:18
 #: templates/account/password_reset_done.html:6
 #: templates/account/password_reset_done.html:16
 msgid "Password Reset"
-msgstr ""
+msgstr "Възтановяване на парола"
 
 #: templates/account/password_reset.html:23
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
 msgstr ""
+"Забравихте си паролата? Въведете си e-mail-a и ние ще ви изпратим писмо за "
+"промяната и"
 
 #: templates/account/password_reset.html:29
 msgid "Reset My Password"
-msgstr ""
+msgstr "Промени парола"
 
 #: templates/account/password_reset.html:32
 msgid "Please contact us if you have any trouble resetting your password."
-msgstr ""
+msgstr "Моля всържете се с нас при проблеми"
 
 #: templates/account/password_reset_done.html:22
 msgid ""
 "We have sent you an e-mail. Please contact us if you do not receive it "
 "within a few minutes."
-msgstr ""
+msgstr "Изпратихме ви e-mail. Моля свържете се с нас ако не го получите"
 
 #: templates/account/password_reset_from_key.html:15
 msgid "Bad Token"
@@ -1510,27 +1820,80 @@ msgstr ""
 
 #: templates/account/password_reset_from_key.html:26
 msgid "Change password"
-msgstr ""
+msgstr "Промени парола"
 
 #: templates/account/password_reset_from_key.html:29
 #: templates/account/password_reset_from_key_done.html:15
 msgid "Your password is now changed."
-msgstr ""
+msgstr "Паролата е вече променена"
 
 #: templates/account/password_set.html:6 templates/account/password_set.html:16
 #: templates/account/password_set.html:21
 msgid "Set Password"
 msgstr ""
 
+#: templates/account/profile.html:15 templates/account/profile.html:31
+msgid "Username:"
+msgstr "Потребител"
+
+#: templates/account/profile.html:16 templates/account/profile.html:32
+msgid "Email:"
+msgstr "Email"
+
+#: templates/account/profile.html:17
+msgid "First Name:"
+msgstr "Име"
+
+#: templates/account/profile.html:18
+msgid "Last Name:"
+msgstr "Фамилия"
+
+#: templates/account/profile.html:19 templates/account/profile.html:35
+msgid "Mobile:"
+msgstr "Мобилен"
+
+#: templates/account/profile.html:22
+msgid "Edit profile information"
+msgstr "Редактирай профил"
+
+#: templates/account/profile.html:24 templates/category/category_list.html:28
+#: templates/category/category_list.html:38
+msgid "Apply for job"
+msgstr "Кандидатстване за работа"
+
+#: templates/account/profile.html:26
+msgid "My Cv's"
+msgstr "Моите CV-та"
+
+#: templates/account/profile.html:33
+msgid "Company name:"
+msgstr "Име на компанията"
+
+#: templates/account/profile.html:34
+msgid "Address:"
+msgstr "Адрес"
+
+#: templates/account/profile.html:38
+msgid "Edit company information"
+msgstr "Редактирай профил"
+
+#: templates/account/profile.html:40
+msgid "Find employees"
+msgstr "Намери работници"
+
+#: templates/account/profile.html:42
+msgid "My orders"
+msgstr "Моите заявки"
+
 #: templates/account/signup.html:5 templates/costumeuser/worker_signup.html:5
 msgid "Signup"
-msgstr ""
+msgstr "Регистрирай се"
 
 #: templates/account/signup.html:15
 #: templates/costumeuser/company_signup.html:21
-#: templates/costumeuser/worker_signup.html:24
+#: templates/costumeuser/worker_signup.html:23
 msgid "Sign Up"
-msgstr ""
+msgstr "Регистрирай се"
 
 #: templates/account/signup.html:16
 #: templates/costumeuser/company_signup.html:13
@@ -1538,7 +1901,24 @@ msgstr ""
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
-msgstr ""
+msgstr "Вече имате профил? <a href=\"%(login_url)s\">Вход</a>."
+
+#: templates/account/signup.html:20
+msgid "Looking for employers"
+msgstr "Търсите работодател"
+
+#: templates/account/signup.html:23
+msgid "Worker"
+msgstr "Работник"
+
+#: templates/account/signup.html:28
+msgid "Looking for employees"
+msgstr "Търсите работници"
+
+#: templates/account/signup.html:31 templates/category/cv_detail.html:61
+#: templates/category/cv_detail.html:69 templates/category/cv_detail.html:77
+msgid "Company"
+msgstr "Фирма"
 
 #: templates/account/signup_closed.html:5
 #: templates/account/signup_closed.html:15
@@ -1556,14 +1936,14 @@ msgstr ""
 #: templates/account/snippets/already_logged_in.html:5
 #, python-format
 msgid "you are already logged in as %(user_display)s."
-msgstr ""
+msgstr "Вече сте влезли в профила си %(user_display)s."
 
 #: templates/account/verification_sent.html:5
 #: templates/account/verification_sent.html:15
 #: templates/account/verified_email_required.html:5
 #: templates/account/verified_email_required.html:15
 msgid "Verify Your E-mail Address"
-msgstr ""
+msgstr "Потвърдете вашият e-mail "
 
 #: templates/account/verification_sent.html:17
 msgid ""
@@ -1571,6 +1951,9 @@ msgid ""
 "finalize the signup process. Please contact us if you do not receive it "
 "within a few minutes."
 msgstr ""
+"Изпратихме ви имейл за проверка. Следвайте предоставената връзка, за да "
+"завършите процеса на регистрация. Моля, свържете се с нас, ако не го "
+"получите ."
 
 #: templates/account/verified_email_required.html:19
 msgid ""
@@ -1587,6 +1970,9 @@ msgid ""
 "Please\n"
 "                contact us if you do not receive it within a few minutes."
 msgstr ""
+"Изпратихме имейл до вас за\n"
+"проверка. Моля, кликнете върху връзката в този имейл. Моля те\n"
+"свържете се с нас, ако не го получите."
 
 #: templates/account/verified_email_required.html:27
 #, python-format
@@ -1595,13 +1981,308 @@ msgid ""
 "mail address</a>."
 msgstr ""
 
-#: templates/category/category_list.html:9
+#: templates/category/category_list.html:5 templates/footer.html:34
+#: templates/nav.html:13
+msgid "Job-Positions"
+msgstr "Позиции"
+
+#: templates/category/category_list.html:12
 msgid "All niches and job positions we work with."
+msgstr "Всички позиции за работа"
+
+#: templates/category/category_list.html:13
+msgid "Category info text"
+msgstr "Разгледайте всички позиции и подайте  CV към най подходящата за вас"
+
+#: templates/category/category_list.html:32
+#: templates/category/category_list.html:43
+msgid "Get offer for workers"
+msgstr "Оферта за работници"
+
+#: templates/category/category_list.html:47
+msgid "Availables workers"
+msgstr "Налични работници"
+
+#: templates/category/company_form.html:5
+msgid "you are about to send application for"
+msgstr "Вие сте на път да изпратите искане"
+
+#: templates/category/company_form.html:17
+msgid "you are about to send application for:"
+msgstr "Вие сте на път да изпратите искане"
+
+#: templates/category/company_form.html:35
+msgid "You have to be register as Company to take offer for"
+msgstr "Трябва да се регистрирате като компания, за която да вземете оферта"
+
+#: templates/category/cv_detail.html:7 templates/category/cv_detail.html:20
+msgid "CV you apply for"
+msgstr "CV което сте изпратили"
+
+#: templates/category/cv_detail.html:28
+msgid "Profile"
+msgstr "Профил"
+
+#: templates/category/cv_detail.html:29 templates/category/order_detail.html:17
+msgid "Last updated on"
+msgstr "Последно редактиран на"
+
+#: templates/category/cv_detail.html:31
+msgid "First Name"
+msgstr "Име"
+
+#: templates/category/cv_detail.html:32
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: templates/category/cv_detail.html:33
+msgid "Email"
+msgstr "Email"
+
+#: templates/category/cv_detail.html:34
+msgid "Phone"
+msgstr "Мобилен"
+
+#: templates/category/cv_detail.html:39
+msgid "CV generated by"
+msgstr "Cv създадено от "
+
+#: templates/category/cv_detail.html:40 templates/category/cv_form.html:25
+msgid " Personal Information"
+msgstr "Лична информация"
+
+#: templates/category/cv_detail.html:42
+msgid "Birth day"
+msgstr "Рожденна дата"
+
+#: templates/category/cv_detail.html:43
+msgid "Gender:"
+msgstr "Пол:"
+
+#: templates/category/cv_detail.html:44
+msgid "Driving License"
+msgstr "Шофьорска книжка"
+
+#: templates/category/cv_detail.html:45
+msgid "Ready to strat work"
+msgstr "Готов да започне работа"
+
+#: templates/category/cv_detail.html:46
+msgid "Expected salary"
+msgstr "Очакван заплата в евро"
+
+#: templates/category/cv_detail.html:49 templates/category/cv_form.html:40
+msgid "Languages"
+msgstr "Езици"
+
+#: templates/category/cv_detail.html:51
+msgid "First"
+msgstr "Първи"
+
+#: templates/category/cv_detail.html:52 templates/category/cv_detail.html:54
+#: templates/category/cv_detail.html:56
+msgid "Level"
+msgstr "Ниво"
+
+#: templates/category/cv_detail.html:53
+msgid "Second"
+msgstr "Втори"
+
+#: templates/category/cv_detail.html:55
+msgid "Third"
+msgstr "Ниво"
+
+#: templates/category/cv_detail.html:58 templates/category/cv_form.html:53
+msgid "Last employers"
+msgstr "Последен работодател"
+
+#: templates/category/cv_detail.html:60 templates/category/cv_detail.html:68
+#: templates/category/cv_detail.html:76
+msgid "Country"
+msgstr "Страна"
+
+#: templates/category/cv_detail.html:62 templates/category/cv_detail.html:70
+#: templates/category/cv_detail.html:78
+msgid "Position"
+msgstr "Позиция"
+
+#: templates/category/cv_detail.html:63 templates/category/cv_detail.html:71
+#: templates/category/cv_detail.html:79
+msgid "Start date"
+msgstr "Запознал работа на"
+
+#: templates/category/cv_detail.html:64 templates/category/cv_detail.html:72
+#: templates/category/cv_detail.html:80
+msgid "End date"
+msgstr "Завършил работа на"
+
+#: templates/category/cv_detail.html:66 templates/category/cv_form.html:65
+msgid "Second employers"
+msgstr "Втори работодател"
+
+#: templates/category/cv_detail.html:74 templates/category/cv_form.html:77
+msgid "Third employers"
+msgstr "Трети работодател"
+
+#: templates/category/cv_detail.html:85 templates/category/cv_detail.html:91
+msgid "Certificate"
+msgstr "Сертификат"
+
+#: templates/category/cv_form.html:5 templates/category/cv_form.html:17
+msgid "Create Cv"
+msgstr "Създай CV"
+
+#: templates/category/cv_form.html:16
+msgid "you are about to apply Cv for:"
+msgstr "Вие сте на път да кандидатсвате за:"
+
+#: templates/category/cv_form.html:94
+msgid "You have to be register as Worker to register your CV for:"
+msgstr "Вие трябва да сте регистриран като работник, за да подадете CV"
+
+#: templates/category/cv_list.html:13
+msgid ""
+"This is CV's you apply to us. Pleace keep you personal information up to "
+"date."
+msgstr "Това са вашите CV-та подадени към нас"
+
+#: templates/category/cv_list.html:17
+msgid "Date you apply or update cv-"
+msgstr "Дата на подаване или редактиране"
+
+#: templates/category/cv_list.html:20
+msgid "Position you apply"
+msgstr "Позиция за която кандидатсвахте"
+
+#: templates/category/cv_list.html:21 templates/category/order_list.html:22
+msgid "Preview"
+msgstr "Покажи"
+
+#: templates/category/cv_list.html:22 templates/category/order_detail.html:28
+#: templates/category/order_list.html:23
+msgid "Edit"
+msgstr "Редактирай"
+
+#: templates/category/order_detail.html:5
+#: templates/category/order_detail.html:16
+msgid "your application for:"
+msgstr "Вашата заявка за: "
+
+#: templates/category/order_detail.html:20
+msgid "Your order"
+msgstr "Вашата заявка "
+
+#: templates/category/order_detail.html:21
+msgid "Country you need employees"
+msgstr "Страна в която ще работят"
+
+#: templates/category/order_detail.html:22
+msgid "City you need employees"
+msgstr "Град в който ще работят"
+
+#: templates/category/order_detail.html:23
+msgid "Address employees have to work"
+msgstr "Адрес на работа"
+
+#: templates/category/order_detail.html:24
+msgid "Quantity employers you need"
+msgstr "Количество работници"
+
+#: templates/category/order_detail.html:25
+msgid "Start date for employers"
+msgstr "Започване на работа"
+
+#: templates/category/order_detail.html:26
+msgid "Last date for employers"
+msgstr "Край на работа"
+
+#: templates/category/order_list.html:4 templates/category/order_list.html:14
+msgid "This is yours applications for employee."
+msgstr "Това са вашите заявки за работници"
+
+#: templates/category/order_list.html:18
+msgid "Date you apply or edit your order-"
+msgstr "Дата на подаване или последна редакция"
+
+#: templates/category/order_list.html:21
+msgid "Position you requested"
+msgstr "Позиция"
+
+#: templates/category/worker_cvs.html:5 templates/category/worker_cvs.html:14
+msgid "All applyed CV's for"
+msgstr "Всички подадени CV-та"
+
+#: templates/costumeuser/company_signup.html:12
+msgid "Sign Up as Employer"
+msgstr "Регистрация Работодател"
+
+#: templates/costumeuser/worker_signup.html:12
+msgid "Sign Up as Employee"
 msgstr ""
 
-#: templates/category/category_list.html:10 templates/home.html:24
+#: templates/faq/faq_detail.html:14
+msgid "All questions"
+msgstr "Всички въпроси"
+
+#: templates/faq/faq_list.html:4 templates/faq/faq_list.html:9
+msgid "Friquently Asked Questions"
+msgstr "Въпроси и отговори"
+
+#: templates/footer.html:9
+msgid "Contacts Footer"
+msgstr "Контакти"
+
+#: templates/footer.html:11
+msgid "My adress footer"
+msgstr "Адрес"
+
+#: templates/footer.html:12
+msgid "My phone number footer"
+msgstr "Телефон"
+
+#: templates/footer.html:13
+msgid "Мобилен: +359 892 999 092 footer"
+msgstr "Мобилен"
+
+#: templates/footer.html:19
+msgid "Address Map footer"
+msgstr "Карта"
+
+#: templates/footer.html:26
+msgid "Pages footer"
+msgstr "Страници"
+
+#: templates/footer.html:31
+msgid "Home"
+msgstr "Начало"
+
+#: templates/footer.html:37 templates/nav.html:16
+msgid "News"
+msgstr "Новини"
+
+#: templates/footer.html:40 templates/nav.html:19
+msgid "FAQ"
+msgstr "Въпроси и отговори"
+
+#: templates/footer.html:43 templates/nav.html:22
+msgid "Contact"
+msgstr "Контакти"
+
+#: templates/home.html:16
 msgid ""
-"Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+"We are a liders in Humanresources. We provide best services for all "
+"employees and employers"
+msgstr ""
+"Ние сме лидери в областта на човешките ресурси. Ние предлагаме най-добрите "
+"услуги за всички служители и работодатели"
+
+#: templates/home.html:23
+msgid "About us"
+msgstr "За нас"
+
+#: templates/home.html:24
+msgid ""
+"About us..... simply dummy text of the printing and typesetting industry. "
 "Lorem Ipsum has been the industry's standard dummy text ever since the "
 "1500s, when an unknown printer took a galley of type and scrambled it to "
 "make a type specimen book. It has survived not only five centuries, but also "
@@ -1611,261 +2292,34 @@ msgid ""
 "like Aldus PageMaker including versions of Lorem Ipsum."
 msgstr ""
 
-#: templates/category/category_list.html:25
-#: templates/category/category_list.html:35
-msgid "Apply for job"
-msgstr ""
-
-#: templates/category/category_list.html:29
-#: templates/category/category_list.html:40
-msgid "Get offer for workers"
-msgstr ""
-
-#: templates/category/category_list.html:44
-msgid "Availables workers"
-msgstr ""
-
-#: templates/category/company_form.html:5
-#: templates/category/company_form.html:17
-msgid "you are about to send application for"
-msgstr ""
-
-#: templates/category/company_form.html:37
-msgid "You have to be register as Company to take offer for"
-msgstr ""
-
-#: templates/category/cv_detail.html:6 templates/category/cv_detail.html:19
-msgid "CV you apply for"
-msgstr ""
-
-#: templates/category/cv_detail.html:27
-msgid "Profile"
-msgstr ""
-
-#: templates/category/cv_detail.html:28 templates/category/order_detail.html:17
-msgid "Last updated on"
-msgstr ""
-
-#: templates/category/cv_detail.html:30
-msgid "First Name"
-msgstr ""
-
-#: templates/category/cv_detail.html:31
-msgid "Last Name"
-msgstr ""
-
-#: templates/category/cv_detail.html:32
-msgid "Email"
-msgstr ""
-
-#: templates/category/cv_detail.html:33
-msgid "Phone"
-msgstr ""
-
-#: templates/category/cv_detail.html:38
-msgid "CV generated by"
-msgstr ""
-
-#: templates/category/cv_detail.html:41
-msgid "Birth day"
-msgstr ""
-
-#: templates/category/cv_detail.html:42
-msgid "Gender"
-msgstr ""
-
-#: templates/category/cv_detail.html:43
-msgid "Driving License"
-msgstr ""
-
-#: templates/category/cv_detail.html:44
-msgid "Ready to strat work"
-msgstr ""
-
-#: templates/category/cv_detail.html:45
-msgid "Expected salary"
-msgstr ""
-
-#: templates/category/cv_detail.html:48
-msgid "Languages"
-msgstr ""
-
-#: templates/category/cv_detail.html:50
-msgid "First"
-msgstr ""
-
-#: templates/category/cv_detail.html:51 templates/category/cv_detail.html:53
-#: templates/category/cv_detail.html:55
-msgid "Level"
-msgstr ""
-
-#: templates/category/cv_detail.html:52
-msgid "Second"
-msgstr ""
-
-#: templates/category/cv_detail.html:54
-msgid "Third"
-msgstr ""
-
-#: templates/category/cv_detail.html:59 templates/category/cv_detail.html:67
-#: templates/category/cv_detail.html:75
-msgid "Country"
-msgstr ""
-
-#: templates/category/cv_detail.html:60 templates/category/cv_detail.html:68
-#: templates/category/cv_detail.html:76
-msgid "Company"
-msgstr ""
-
-#: templates/category/cv_detail.html:61 templates/category/cv_detail.html:69
-#: templates/category/cv_detail.html:77
-msgid "Position"
-msgstr ""
-
-#: templates/category/cv_detail.html:62 templates/category/cv_detail.html:70
-#: templates/category/cv_detail.html:78
-msgid "Start date"
-msgstr ""
-
-#: templates/category/cv_detail.html:63 templates/category/cv_detail.html:71
-#: templates/category/cv_detail.html:79
-msgid "End date"
-msgstr ""
-
-#: templates/category/cv_detail.html:84 templates/category/cv_detail.html:90
-msgid "Certificate"
-msgstr ""
-
-#: templates/category/cv_list.html:12
-msgid ""
-"This is CV's you apply to us. Pleace keep you personal information up to "
-"date."
-msgstr ""
-
-#: templates/category/cv_list.html:16
-msgid "Date you apply- {{ c.submit_date }}"
-msgstr ""
-
-#: templates/category/cv_list.html:19
-msgid "{{ c.job }} - Position you apply"
-msgstr ""
-
-#: templates/category/cv_list.html:20
-msgid "Preview"
-msgstr ""
-
-#: templates/category/cv_list.html:21
-msgid "Update"
-msgstr ""
-
-#: templates/category/order_detail.html:5
-#, python-format
-msgid "%(comp.company_name)s- your application for: %(order.job_titlle)s\" "
-msgstr ""
-
-#: templates/category/order_detail.html:16
-#, python-format
-msgid "%(comp.company_name)s- your application for: %(order.job_titlle)s"
-msgstr ""
-
-#: templates/category/order_detail.html:20
-msgid "Your order"
-msgstr ""
-
-#: templates/category/order_detail.html:21
-msgid "Coutntry you need employers"
-msgstr ""
-
-#: templates/category/order_detail.html:22
-msgid "City you need employers"
-msgstr ""
-
-#: templates/category/order_detail.html:23
-msgid "Address employers have to work"
-msgstr ""
-
-#: templates/category/order_detail.html:24
-msgid "Quantity employers you need"
-msgstr ""
-
-#: templates/category/order_detail.html:25
-msgid "Start date for employers"
-msgstr ""
-
-#: templates/category/order_detail.html:26
-msgid "End date forLast date for employers"
-msgstr ""
-
-#: templates/category/order_detail.html:28
-msgid "Edit order"
-msgstr ""
-
-#: templates/costumeuser/company_signup.html:12
-msgid "Sign Up as Employer"
-msgstr ""
-
-#: templates/costumeuser/worker_signup.html:12
-msgid "Sign Up as Employee"
-msgstr ""
-
-#: templates/faq/faq_detail.html:14
-msgid "All questions"
-msgstr ""
-
-#: templates/faq/faq_list.html:4 templates/faq/faq_list.html:9
-msgid "Friquently Asked Questions"
-msgstr ""
-
-#: templates/home.html:16
-msgid ""
-"We are a liders in Humanresources. We provide best services for all "
-"employees and employers"
-msgstr ""
-
-#: templates/home.html:23
-msgid "About us"
-msgstr ""
-
 #: templates/home.html:32
 msgid "Applyed CV's we recive"
-msgstr ""
+msgstr "Получени CV-та"
 
 #: templates/home.html:39
 msgid "Working Hours we deliver"
-msgstr ""
+msgstr "Работни часове"
 
 #: templates/home.html:46
 msgid "Contracts with companys"
-msgstr ""
+msgstr "Договори с фирми"
 
-#: templates/nav.html:13
-msgid "Job-Positions"
-msgstr "Позиции"
-
-#: templates/nav.html:16
-msgid "News"
-msgstr "Новини"
-
-#: templates/nav.html:19
-msgid "FAQ"
-msgstr "Въпроси и отговори"
-
-#: templates/nav.html:22
-msgid "Contact"
-msgstr "Контакти"
-
-#: templates/nav.html:31
+#: templates/nav.html:43
 msgid "Logout"
 msgstr "Изход"
 
-#: templates/nav.html:35
+#: templates/nav.html:47
 msgid "Login In"
 msgstr "Вход"
 
-#: templates/nav.html:38
+#: templates/nav.html:50
 msgid "Register"
 msgstr "Регистрация"
 
 #: templates/news/news_list.html:4 templates/news/news_list.html:9
 msgid "Latest news"
-msgstr "Последни новини"
+msgstr " Последни новини"
+
+#, python-format
+#~ msgid " Gender: %(cv.gender)s"
+#~ msgstr "Пол: %(cv.gender)s"

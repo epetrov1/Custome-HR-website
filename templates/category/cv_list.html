@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% load i18n %}
+
 {% block headers %}
-<title>{% trans ""}
-{% endblock  headers %}
+<title>{{ user.username }}</title>
+{% endblock headers %}
 <title>{% trans "This is CV's you apply to us. Pleace keep you personal information up to date."}</title>
 {% block content %}
 <div class="container">
@@ -13,12 +14,12 @@
             {% for c in cv %}
             <div class="card">
                 <div class="card-header">
-                    {% trans "Date you apply- {{ c.submit_date }}" %}
+                    <p>{% trans "Date you apply or update cv-" %} {{ c.submit_date }}</p>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">{% trans "{{ c.job }} - Position you apply" %}</h5>
-                    <a href="{% url 'cv_detail' c.id %}" class="btn btn-success">{% trans "Preview" %}</a>>
-                    <a href="{% url 'edit_cv' c.id %}" class="btn btn-success">{% trans "Update" %}</a>
+                    <h5 class="card-title">{{ c.job }} - {% trans 'Position you apply' %}</h5>
+                    <a href="{% url 'cv_detail' c.id %}" class="btn btn-success">{% trans "Preview" %}</a>
+                    <a href="{% url 'edit_cv' c.id %}" class="btn btn-success">{% trans "Edit" %}</a>
                 </div>
             </div>
             <br>

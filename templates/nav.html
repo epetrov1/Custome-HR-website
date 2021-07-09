@@ -50,17 +50,6 @@
         <a class="nav-link" href="{% url 'account_signup' %}">{% trans "Register" %}</a>
       </li>
       {% endif %}
-    </ul>
-    {% comment %} <ul class="navbar-nav">
-        {% get_current_language as LANGUAGE_CODE %}
-        {% get_available_languages as LANGUAGES %}
-        {% get_language_info_list for LANGUAGES as languages %}
-        {% for lang in languages %}
-          <li class="nav-item">
-            <a class="dropdown-item nav-link" href="/{{ lang.code }}/">{{ lang.name_local }}</a>
-          </li>
-        {% endfor %}
-    </ul> {% endcomment %}
-    
+    </ul>    
   </div>
 </nav>
