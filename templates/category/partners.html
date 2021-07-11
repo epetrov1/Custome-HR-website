@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block headers %}
+<title>{% trans "Partners" %}</title>
+{% endblock headers %}
+
+{% block content %}
+<div class="container">
+    <h1 style="color: white; text-align: center">{% trans "Partners" %}</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+        {% for partner in partners %}
+            {% if partner.image != "default.jpeg" %}
+            <div class="card text-center">
+                <img class="card-img-top mx-auto" src="{{ partner.image.url }}" alt="{{ partner.name }}" style="width:150px; height:150px;">
+                <h5 class="card-title">{{ partner.company_name }}</h5>
+            </div>
+            {% endif %}
+        
+        {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

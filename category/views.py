@@ -8,8 +8,13 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect
 
 
+#All categorys
+def category_all(request):
+    category = Category.objects.all()
+    return render(request, 'category/category_all.html', {'category': category})
 
-#List of all categorys
+
+#List of all categorys + subcategory
 def category_list(request, id):
     category = Category.objects.all()
     category_1 = Category.objects.all()
@@ -23,6 +28,11 @@ def category_list(request, id):
     }
     return render(request, 'category/category_list.html', context)
 
+
+#Partenrs page view
+def partners(request):
+    partners = Company.objects.all()
+    return render(request, 'category/partners.html', {'partners': partners})
 
 
 
