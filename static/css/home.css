@@ -8,17 +8,18 @@
     background-repeat: no-repeat;
 }
 .main-header { 
-    padding-top: 300px;
-    text-align: center;
+    padding-top: 250px;
     color: black;
     font-family: 'Pattaya', sans-serif;
+    margin: auto;
+    text-align: center;
 }
 
-.headerone {
+/* .headerone {
     background-color: lightgray;
     opacity: 0.3;
     word-wrap: break-word;
-}
+} */
 
 .counter {
     font-size : 52px;

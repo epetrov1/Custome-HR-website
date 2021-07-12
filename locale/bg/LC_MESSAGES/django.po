@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-09 23:19+0300\n"
-"PO-Revision-Date: 2021-07-09 20:18+0000\n"
+"PO-Revision-Date: 2021-07-12 13:16+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -415,8 +415,8 @@ msgstr ""
 
 #: env/lib/python3.8/site-packages/django/core/validators.py:266
 msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
+" hyphens."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/core/validators.py:275
@@ -601,15 +601,15 @@ msgstr "Дата"
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1288
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
-"uuuuuu]][TZ] format."
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1292
 #, python-format
 msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
+"“%(value)s” value has the correct format (YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1296
@@ -628,8 +628,8 @@ msgstr ""
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1585
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
-"uuuuuu] format."
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1588
@@ -788,7 +788,8 @@ msgid "Many-to-many relationship"
 msgstr ""
 
 #. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
+#. characters will prevent the default label_suffix to be appended to the
+#. label
 #: env/lib/python3.8/site-packages/django/forms/boundfield.py:150
 msgid ":?.!"
 msgstr ""
@@ -834,7 +835,8 @@ msgstr ""
 
 #: env/lib/python3.8/site-packages/django/forms/fields.py:542
 #, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid ""
+"Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
@@ -941,7 +943,8 @@ msgid "The inline value did not match the parent instance."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/forms/models.py:1193
-msgid "Select a valid choice. That choice is not one of the available choices."
+msgid ""
+"Select a valid choice. That choice is not one of the available choices."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/forms/models.py:1311
@@ -1393,11 +1396,11 @@ msgstr ""
 
 #: env/lib/python3.8/site-packages/django/views/csrf.py:124
 msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
-"\" …> for links to third-party sites."
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
+" including the “Referrer-Policy: no-referrer” header, please remove them. "
+"The CSRF protection requires the “Referer” header to do strict referer "
+"checking. If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/views/csrf.py:132
@@ -1448,8 +1451,8 @@ msgstr ""
 #: env/lib/python3.8/site-packages/django/views/generic/dates.py:594
 #, python-format
 msgid ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/views/generic/dates.py:628
@@ -1505,10 +1508,10 @@ msgstr ""
 #: env/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:222
 #, python-format
 msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
-"\">DEBUG=True</a> is in your settings file and you have not configured any "
-"URLs."
+"You are seeing this page because <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
+"and you have not configured any URLs."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:230
@@ -1615,7 +1618,8 @@ msgstr ""
 #: templates/account/email.html:48
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
-"an e-mail address so you can receive notifications, reset your password, etc."
+"an e-mail address so you can receive notifications, reset your password, "
+"etc."
 msgstr ""
 
 #: templates/account/email.html:53
@@ -1645,8 +1649,7 @@ msgstr ""
 #: templates/account/email/email_confirmation_message.txt:5
 #, python-format
 msgid ""
-"You're receiving this e-mail because user %(user_display)s has given your e-"
-"mail address to register an account on %(site_domain)s.\n"
+"You're receiving this e-mail because user %(user_display)s has given your e-mail address to register an account on %(site_domain)s.\n"
 "\n"
 "To confirm this is correct, go to %(activate_url)s"
 msgstr ""
@@ -1657,10 +1660,8 @@ msgstr ""
 
 #: templates/account/email/password_reset_key_message.txt:4
 msgid ""
-"You're receiving this e-mail because you or someone else has requested a "
-"password for your user account.\n"
-"It can be safely ignored if you did not request a password reset. Click the "
-"link below to reset your password."
+"You're receiving this e-mail because you or someone else has requested a password for your user account.\n"
+"It can be safely ignored if you did not request a password reset. Click the link below to reset your password."
 msgstr ""
 
 #: templates/account/email/password_reset_key_message.txt:9
@@ -1691,12 +1692,13 @@ msgstr "Потвърдете"
 #: templates/account/email_confirm.html:34
 #, python-format
 msgid ""
-"This e-mail confirmation link expired or is invalid. Please <a href="
-"\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+"This e-mail confirmation link expired or is invalid. Please <a "
+"href=\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
 
 #: templates/account/login.html:5 templates/account/login.html:15
-#: templates/account/login.html:26 templates/costumeuser/worker_profile.html:12
+#: templates/account/login.html:26
+#: templates/costumeuser/worker_profile.html:12
 msgid "Sign In"
 msgstr "Вход"
 
@@ -1706,8 +1708,8 @@ msgid ""
 "If you have not created an account yet, then please\n"
 "        <a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
-"Ако нямате регистрация още. Може да направите от  <a href=\"%(signup_url)s"
-"\">Тук.</a>"
+"Ако нямате регистрация още. Може да направите от  <a "
+"href=\"%(signup_url)s\">Тук.</a>"
 
 #: templates/account/login.html:24 templates/account/password_change.html:22
 msgid "Forgot Password?"
@@ -1786,8 +1788,8 @@ msgstr "Възтановяване на парола"
 
 #: templates/account/password_reset.html:23
 msgid ""
-"Forgotten your password? Enter your e-mail address below, and we'll send you "
-"an e-mail allowing you to reset it."
+"Forgotten your password? Enter your e-mail address below, and we'll send you"
+" an e-mail allowing you to reset it."
 msgstr ""
 "Забравихте си паролата? Въведете си e-mail-a и ние ще ви изпратим писмо за "
 "промяната и"
@@ -1814,8 +1816,8 @@ msgstr ""
 #, python-format
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
-"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
-"a>."
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password "
+"reset</a>."
 msgstr ""
 
 #: templates/account/password_reset_from_key.html:26
@@ -1827,7 +1829,8 @@ msgstr "Промени парола"
 msgid "Your password is now changed."
 msgstr "Паролата е вече променена"
 
-#: templates/account/password_set.html:6 templates/account/password_set.html:16
+#: templates/account/password_set.html:6
+#: templates/account/password_set.html:16
 #: templates/account/password_set.html:21
 msgid "Set Password"
 msgstr ""
@@ -1958,16 +1961,14 @@ msgstr ""
 #: templates/account/verified_email_required.html:19
 msgid ""
 "This part of the site requires us to verify that\n"
-"                you are who you claim to be. For this purpose, we require "
-"that you\n"
+"                you are who you claim to be. For this purpose, we require that you\n"
 "                verify ownership of your e-mail address. "
 msgstr ""
 
 #: templates/account/verified_email_required.html:23
 msgid ""
 "We have sent an e-mail to you for\n"
-"                verification. Please click on the link inside this e-mail. "
-"Please\n"
+"                verification. Please click on the link inside this e-mail. Please\n"
 "                contact us if you do not receive it within a few minutes."
 msgstr ""
 "Изпратихме имейл до вас за\n"
@@ -1977,14 +1978,14 @@ msgstr ""
 #: templates/account/verified_email_required.html:27
 #, python-format
 msgid ""
-"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
-"mail address</a>."
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your "
+"e-mail address</a>."
 msgstr ""
 
 #: templates/category/category_list.html:5 templates/footer.html:34
 #: templates/nav.html:13
 msgid "Job-Positions"
-msgstr "Позиции"
+msgstr "Работни Позиции"
 
 #: templates/category/category_list.html:12
 msgid "All niches and job positions we work with."
@@ -2023,7 +2024,8 @@ msgstr "CV което сте изпратили"
 msgid "Profile"
 msgstr "Профил"
 
-#: templates/category/cv_detail.html:29 templates/category/order_detail.html:17
+#: templates/category/cv_detail.html:29
+#: templates/category/order_detail.html:17
 msgid "Last updated on"
 msgstr "Последно редактиран на"
 
@@ -2094,7 +2096,7 @@ msgstr "Ниво"
 
 #: templates/category/cv_detail.html:58 templates/category/cv_form.html:53
 msgid "Last employers"
-msgstr "Последен работодател"
+msgstr "Първи работодател"
 
 #: templates/category/cv_detail.html:60 templates/category/cv_detail.html:68
 #: templates/category/cv_detail.html:76
@@ -2152,7 +2154,7 @@ msgstr "Дата на подаване или редактиране"
 
 #: templates/category/cv_list.html:20
 msgid "Position you apply"
-msgstr "Позиция за която кандидатсвахте"
+msgstr "Позиция за която кандидатствахте"
 
 #: templates/category/cv_list.html:21 templates/category/order_list.html:22
 msgid "Preview"
@@ -2262,7 +2264,7 @@ msgstr "Новини"
 
 #: templates/footer.html:40 templates/nav.html:19
 msgid "FAQ"
-msgstr "Въпроси и отговори"
+msgstr "Въпроси "
 
 #: templates/footer.html:43 templates/nav.html:22
 msgid "Contact"
@@ -2285,8 +2287,8 @@ msgid ""
 "About us..... simply dummy text of the printing and typesetting industry. "
 "Lorem Ipsum has been the industry's standard dummy text ever since the "
 "1500s, when an unknown printer took a galley of type and scrambled it to "
-"make a type specimen book. It has survived not only five centuries, but also "
-"the leap into electronic typesetting, remaining essentially unchanged. It "
+"make a type specimen book. It has survived not only five centuries, but also"
+" the leap into electronic typesetting, remaining essentially unchanged. It "
 "was popularised in the 1960s with the release of Letraset sheets containing "
 "Lorem Ipsum passages, and more recently with desktop publishing software "
 "like Aldus PageMaker including versions of Lorem Ipsum."

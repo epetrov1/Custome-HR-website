@@ -40,42 +40,42 @@
                 <h3><span class="badge bg-secondary">{% trans " Personal Information" %}</span></h3>
                 <div>
                     <h5>{% trans "Birth day" %}: {{ cv.birth_day }}</h5>
-                    <h5>{% trans "Gender:" %} {{ cv.gender }}</h5>
-                    <h5>{% trans "Driving License" %}: {{ cv.driving_license }}</h5>
+                    <h5>{% trans "Gender:" %} {% trans cv.gender %}</h5>
+                    <h5>{% trans "Driving License" %}: {% trans cv.driving_license %}</h5>
                     <h5>{% trans "Ready to strat work" %}: {{ cv.ready_to_start }}</h5>
-                    <h5>{% trans "Expected salary" %}: {{ cv.expectet_salary }}€</h5>
+                    {% comment %} <h5>{% trans "Expected salary" %}: {{ cv.expectet_salary }}€</h5> {% endcomment %}
                     
                 </div>
                 <h3><span class="badge bg-secondary">{% trans "Languages" %}</span></h3>
                 <div>
-                    <h5>{% trans "First" %}: {{ cv.first_lang }}</h5>
-                    <p>{% trans "Level" %}: {{ cv.first_lang_level }}</p>
-                    <h5>{% trans "Second" %}: {{ cv.secound_lang }}</h5>
-                    <p>{% trans "Level" %}: {{ cv.secound_lang_level }}</p>
-                    <h5>{% trans "Third" %}: {{ cv.third_lang }}</h5>
-                    <p>{% trans "Level" %}: {{ cv.third_lang_level }}</p>
+                    <h5>{% trans "First" %}: {% trans cv.first_lang %}</h5>
+                    <p>{% trans "Level" %}: {% trans cv.first_lang_level %}</p>
+                    <h5>{% trans "Second" %}: {% trans cv.secound_lang %}</h5>
+                    <p>{% trans "Level" %}: {% trans cv.secound_lang_level %}</p>
+                    <h5>{% trans "Third" %}: {% trans cv.third_lang %}</h5>
+                    <p>{% trans "Level" %}: {% trans cv.third_lang_level %}</p>
                 </div>
                 <h3><span class="badge bg-secondary">{% trans "Last employers" %}</span></h3>
                 <div>
-                    <h5>{% trans "Country" %}: {{ cv.country_1 }}</h5>
-                    <h5>{% trans "Company" %}: {{ cv.company_name_1 }}</h5>
-                    <h5>{% trans "Position" %}: {{ cv.position_1 }}</h5>
+                    <h5>{% trans "Country" %}: {% trans cv.country_1 %}</h5>
+                    <h5>{% trans "Company" %}: {% trans cv.company_name_1 %}</h5>
+                    <h5>{% trans "Position" %}: {% trans cv.position_1 %}</h5>
                     <h5>{% trans "Start date" %}: {{ cv.start_date_1 }}</h5>
                     <h5>{% trans "End date" %}: {{ cv.end_date_1 }}</h5>
                 </div>
                 <h3><span class="badge bg-secondary">{% trans "Second employers" %}</span></h3>
                 <div>
-                    <h5>{% trans "Country" %}: {{ cv.country_2 }}</h5>
-                    <h5>{% trans "Company" %}: {{ cv.company_name_2 }}</h5>
-                    <h5>{% trans "Position" %}: {{ cv.position_2 }}</h5>
+                    <h5>{% trans "Country" %}: {% trans cv.country_2 %}</h5>
+                    <h5>{% trans "Company" %}: {% trans cv.company_name_2 %}</h5>
+                    <h5>{% trans "Position" %}: {% trans cv.position_2 %}</h5>
                     <h5>{% trans "Start date" %}: {{ cv.start_date_2 }}</h5>
                     <h5>{% trans "End date" %}: {{ cv.end_date_2 }}</h5>
                 </div>
                 <h3><span class="badge bg-secondary">{% trans "Third employers" %}</span></h3>
                 <div>
-                    <h5>{% trans "Country" %}: {{ cv.country_3 }}</h5>
-                    <h5>{% trans "Company" %}: {{ cv.company_name_3 }}</h5>
-                    <h5>{% trans "Position" %}: {{ cv.position_3 }}</h5>
+                    <h5>{% trans "Country" %}: {% trans cv.country_3 %}</h5>
+                    <h5>{% trans "Company" %}: {% trans cv.company_name_3 %}</h5>
+                    <h5>{% trans "Position" %}: {% trans cv.position_3 %}</h5>
                     <h5>{% trans "Start date" %}: {{ cv.start_date_3 }}</h5>
                     <h5>{% trans "End date" %}: {{ cv.end_date_3 }}</h5>
                 </div>

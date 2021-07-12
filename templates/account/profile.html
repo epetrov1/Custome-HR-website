@@ -21,7 +21,7 @@
                 </div>
                 <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'worker_profile_edit' user.id %}">{% trans "Edit profile information" %}</a>
                 <br>
-                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' 1 %}">{% trans "Apply for job" %}</a>
+                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'category_all' %}">{% trans "Apply for job" %}</a>
                 <br />
                 <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'cv_list' %}">{% trans "My Cv's" %}</a>
                 <br />
@@ -37,7 +37,7 @@
                 </div>
                 <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'company_profile_edit' user.id %}">{% trans "Edit company information" %}</a>
                 <br>
-                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' 1 %}">{% trans "Find employees" %}</a>
+                <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'category_all' %}">{% trans "Find employees" %}</a>
                 <br>
                 <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'order_list' %}">{% trans "My orders" %}</a>
             {% else %}

@@ -41,7 +41,6 @@ class Cv(models.Model):
         ('French', _('French')),
         ('Italian', _('Italian')),
         ('Spanish', _('Spanish')),
-        ('Turkish', _('Turkish')),
         ('Russian', _('Russian')),
     ]
 
