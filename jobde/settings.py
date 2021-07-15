@@ -17,8 +17,13 @@ env = environ.Env(
     # set casting, default value
     DEBUG=(bool, False)
 )
+READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
+if READ_DOT_ENV_FILE:
+    # reading .env file
+    environ.Env.read_env()
+
 # reading .env file
-environ.Env.read_env()
+#environ.Env.read_env()
 
 # False if not in os.environ
 DEBUG = env('DEBUG')
@@ -64,10 +69,7 @@ INSTALLED_APPS = [
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 #User settings
 AUTH_USER_MODEL = 'costumeuser.User'
-""" ACCOUNT_FORMS = {
-    'login': 'costumeuser.forms.CostumeLoginForm',
-    
-} """
+
 #Authentication Backend
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -135,13 +137,22 @@ WSGI_APPLICATION = 'jobde.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+""" DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+} """
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env("DB_NAME"),
+        'USER': env("DB_USER"),
+        'PASSWORD': env("DB_PASSWORD"),
+        'HOST': env("DB_HOST"),
+        'PORT': env("DB_PORT"),
+    }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
