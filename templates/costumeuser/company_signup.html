@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
-
+{% load static %}
 {% load i18n %}
+{% block headers %}
+<title>{% trans "Sign In" %}</title>
+<link rel="stylesheet" href="{% static 'css/signin.css' %}">
 
+{% endblock headers %}
 {% block content %}
 <div class="container">
     <div class="row justify-content-center">
@@ -14,14 +18,39 @@
                 <form class="signup" id="signup_form" method="post" action="{% url 'company_signup_view' %}">
                     {% csrf_token %}
                     {{ form|crispy }}
+                    <span class="viewpass"><i class="fa fa-eye fa-lg" aria-hidden="true" id="eye" onclick="toggle()"></i></span>
                     {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                     {% endif %}
                     <br>
+                    <p>{% trans 'With pressing sign up you are agree with' %}% <a href="{% url 'news' %}">Conditions, Privacy and Coocees.</a></p>
                     <button class="btn btn-primary" type="submit">{% trans "Sign Up" %} &raquo;</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+<script>
+  var state = false;
+  function toggle(){
+    if(state){
+      document.getElementById(
+        "id_password1"
+      ).setAttribute("type", "password");
+      document.getElementById(
+        "id_password2"
+      ).setAttribute("type", "password");
+      state = false;
+    }
+    else{
+      document.getElementById(
+        "id_password1"
+      ).setAttribute("type", "text");
+      document.getElementById(
+        "id_password2"
+      ).setAttribute("type", "text");
+      state = true;
+    }
+  }
+</script>
 {% endblock content %}

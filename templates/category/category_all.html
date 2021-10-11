@@ -3,20 +3,31 @@
 {% load static %}
 {% block headers %}
 <title>{% trans "Job-Positions" %}</title>
+<link rel="stylesheet" href="{% static 'css/category.css' %}">
 {% endblock headers %}
 
 {% block content %}
 <br>
 <br>
+<!--https://www.bestcssbuttongenerator.com/#/1 css for button -->
 <div class="container">
     <h1 style="color: white; text-align: center">{% trans "All niches and job positions we work with." %}</h1>
     <p>{% trans "Category info text" %}</p>
-    {% for cat in category %}
-        <div class="btn-group">
-            <a style="text-decoration: none; color:white; font-weight:20" href="{% url 'category' cat.id %}"><h2><span class="badge bg-light text-dark">{{ cat.name }}</span></h2></a>
+    <div class="row">
+        <div class="col text-center">
+            <!-- Example single danger button -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Category
+                </button>
+                <div class="dropdown-menu">
+                {% for cat in category %}
+                    <a class="dropdown-item" style="text-center" href="{% url 'category' cat.id %}">{{ cat.name }}</a>
+                {% endfor %}
+                </div>
+            </div>
         </div>
-    {% endfor %}
-    <h2><span class="badge" style="color:white">{% trans "Choose the category to view all positions" %}</span></h2>
+    </div>
 </div>
 
 {% endblock content %}

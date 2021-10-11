@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from multiselectfield import MultiSelectField
 from costumeuser.models import Company, Worker, User
 from django.utils.translation import gettext_lazy as _
 
@@ -34,6 +35,32 @@ class Cv(models.Model):
     DRIVING_LICENSE = [
         ('Yes', _('Yes')),
         ('No', _('No')),
+    ]
+    """ DRIVING_CATEGORY = [
+        (1, _('B')),
+        (2, _('B1')),
+        (3, _('C')),
+        (4, _('C1')),
+        (5, _('D')),
+        (6, _('D1')),
+        (7, _('BE')),
+        (8, _('C1E')),
+        (9, _('CE')),
+        (10, _('D1E')),
+        (11, _('DE')),
+    ] """
+    DRIVING_CATEGORY = [
+        ('B', _('B')),
+        ('B1', _('B1')),
+        ('C', _('C')),
+        ('C1', _('C1')),
+        ('D', _('D')),
+        ('D1', _('D1')),
+        ('BE', _('BE')),
+        ('C1E', _('C1E')),
+        ('CE', _('CE')),
+        ('D1E', _('D1E')),
+        ('DE', _('DE')),
     ]
     LANG1 = [
         ('English', _('English')),
@@ -85,9 +112,11 @@ class Cv(models.Model):
 
     job = models.ForeignKey(SubCategory, on_delete=models.CASCADE)
     worker = models.ForeignKey(User, on_delete=models.CASCADE)
+    cv_img = models.ImageField(_('cv_img'), default="default.jpeg", upload_to='cv/username/%Y/%m/%d/')
     birth_day = models.DateField(_("birth_day"))
     gender = models.CharField(_('gender'), max_length=50, choices=GENDER)
     driving_license = models.CharField(_('driving_license'), max_length=10, choices=DRIVING_LICENSE)
+    driving_category = MultiSelectField(_("driving_category"), choices=DRIVING_CATEGORY, blank=True)
     first_lang = models.CharField(_('first_lang'), max_length=20, choices=LANG1, blank=True)
     first_lang_level = models.CharField(_("first_lang_level"), max_length=50, choices=LANG_LEVELS, blank=True)
     second_lang = models.CharField(_('second_lang'), max_length=20, choices=LANG1, blank=True)
@@ -102,17 +131,17 @@ class Cv(models.Model):
     #Last 3 job Expiriance 
     country_1 = models.CharField(_('country_1'), max_length=50, choices=COUNTRY) #help_text=_('Country you worked'))
     company_name_1 = models.CharField(_('company_name_1'), max_length=50)
-    position_1 = models.CharField(_("position_1"), max_length=150, choices=POSITION, default="Position I aplly")
+    position_1 = models.CharField(_("position_1"), max_length=150, choices=POSITION)
     start_date_1 = models.DateField(_('start_date_1'),)
     end_date_1 = models.DateField(_('end_date_1'),)
     country_2 = models.CharField(_('country_2'), max_length=50, choices=COUNTRY)
     company_name_2 = models.CharField(_('company_name_2'), max_length=50)
-    position_2 = models.CharField(_('position_2'), max_length=150, choices=POSITION, default="Position I aplly")
+    position_2 = models.CharField(_('position_2'), max_length=150, choices=POSITION)
     start_date_2 = models.DateField(_('start_date_2'),)
     end_date_2 = models.DateField(_('end_date_2'),)
     country_3 = models.CharField(_('country_3'), max_length=50, choices=COUNTRY)
     company_name_3 = models.CharField(_('company_name_3'), max_length=50)
-    position_3 = models.CharField(_('position_3'), max_length=150, choices=POSITION, default="Position I aplly")
+    position_3 = models.CharField(_('position_3'), max_length=150, choices=POSITION)
     start_date_3 = models.DateField(_('start_date_3'),)
     end_date_3 = models.DateField(_('end_date_3'),)
 

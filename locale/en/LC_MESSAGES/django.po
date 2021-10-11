@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-09 22:39+0300\n"
-"PO-Revision-Date: 2021-07-15 08:10+0000\n"
+"POT-Creation-Date: 2021-08-26 08:49+0000\n"
+"PO-Revision-Date: 2021-08-26 09:01+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,327 +19,395 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.6\n"
 
-#: category/models.py:30
+#: category/models.py:31
 msgid "Femail"
 msgstr "Female"
 
-#: category/models.py:31
+#: category/models.py:32
 msgid "Male"
 msgstr "Male"
 
-#: category/models.py:35
+#: category/models.py:36
 #: env/lib/python3.8/site-packages/django/forms/widgets.py:715
 msgid "Yes"
 msgstr "Yes"
 
-#: category/models.py:36
+#: category/models.py:37
 #: env/lib/python3.8/site-packages/django/forms/widgets.py:716
 msgid "No"
 msgstr "No"
 
-#: category/models.py:39 jobde/settings.py:193
+#: category/models.py:53
+msgid "B"
+msgstr ""
+
+#: category/models.py:54
+msgid "B1"
+msgstr ""
+
+#: category/models.py:55
+msgid "C"
+msgstr ""
+
+#: category/models.py:56
+msgid "C1"
+msgstr ""
+
+#: category/models.py:57
+msgid "D"
+msgstr ""
+
+#: category/models.py:58
+msgid "D1"
+msgstr ""
+
+#: category/models.py:59
+msgid "BE"
+msgstr ""
+
+#: category/models.py:60
+msgid "C1E"
+msgstr ""
+
+#: category/models.py:61
+msgid "CE"
+msgstr ""
+
+#: category/models.py:62
+msgid "D1E"
+msgstr ""
+
+#: category/models.py:63
+msgid "DE"
+msgstr ""
+
+#: category/models.py:66 jobde/settings.py:213
 msgid "English"
 msgstr "English"
 
-#: category/models.py:40 jobde/settings.py:194
+#: category/models.py:67 jobde/settings.py:214
 msgid "German"
 msgstr "German"
 
-#: category/models.py:41
+#: category/models.py:68
 msgid "French"
 msgstr "French"
 
-#: category/models.py:42
+#: category/models.py:69
 msgid "Italian"
 msgstr "Italian"
 
-#: category/models.py:43
+#: category/models.py:70
 msgid "Spanish"
 msgstr "Spanish"
 
-#: category/models.py:44
-msgid "Turkish"
-msgstr "Turkish"
-
-#: category/models.py:45
+#: category/models.py:71
 msgid "Russian"
 msgstr "Russian"
 
-#: category/models.py:49
+#: category/models.py:75
 msgid "Basic"
 msgstr "Basic"
 
-#: category/models.py:50
+#: category/models.py:76
 msgid "Medium"
 msgstr "Medium"
 
-#: category/models.py:51
+#: category/models.py:77
 msgid "Fluent"
 msgstr "Fluent"
 
-#: category/models.py:55
+#: category/models.py:81
 msgid "UK"
 msgstr "UK"
 
-#: category/models.py:56
+#: category/models.py:82
 msgid "Germany"
 msgstr "Germany"
 
-#: category/models.py:57
+#: category/models.py:83
 msgid "France"
 msgstr "France"
 
-#: category/models.py:58
+#: category/models.py:84
 msgid "Italy"
 msgstr "Italy"
 
-#: category/models.py:59
+#: category/models.py:85
 msgid "Netherlands"
 msgstr "Netherlands"
 
-#: category/models.py:60
+#: category/models.py:86
 msgid "Switzerland"
 msgstr "Switzerland"
 
-#: category/models.py:61
+#: category/models.py:87
 msgid "Poland"
 msgstr "Poland"
 
-#: category/models.py:62
+#: category/models.py:88
 msgid "Greece"
 msgstr "Greece"
 
-#: category/models.py:63
+#: category/models.py:89
 msgid "Sweden"
 msgstr "Sweden"
 
-#: category/models.py:64
+#: category/models.py:90
 msgid "Bulgaria"
 msgstr "Bulgaria"
 
-#: category/models.py:65
+#: category/models.py:91
 msgid "Belgium"
 msgstr "Belgium"
 
-#: category/models.py:66
+#: category/models.py:92
 msgid "Austria"
 msgstr "Austria"
 
-#: category/models.py:67
+#: category/models.py:93
 msgid "Hungary"
 msgstr "Hungary"
 
-#: category/models.py:68
+#: category/models.py:94
 msgid "Denmark"
 msgstr "Denmark"
 
-#: category/models.py:69
+#: category/models.py:95
 msgid "Finland"
 msgstr "Finland"
 
-#: category/models.py:70
+#: category/models.py:96
 msgid "Norway"
 msgstr "Norway"
 
-#: category/models.py:71
+#: category/models.py:97
 msgid "Czechia"
 msgstr "Czechia"
 
-#: category/models.py:72
+#: category/models.py:98
 msgid "Irland"
 msgstr "Irland"
 
-#: category/models.py:73
+#: category/models.py:99
 msgid "Romania"
 msgstr "Romania"
 
-#: category/models.py:74
+#: category/models.py:100
 msgid "Cyprus"
 msgstr "Cyprus"
 
-#: category/models.py:75
+#: category/models.py:101
 msgid "Slovenia"
 msgstr "Slovenia"
 
-#: category/models.py:76
+#: category/models.py:102
 msgid "Lithuania"
 msgstr "Lithuania"
 
-#: category/models.py:77
+#: category/models.py:103
 msgid "Latvia"
 msgstr "Latvia"
 
-#: category/models.py:78
+#: category/models.py:104
 msgid "Russian Federation"
 msgstr "Russian Federation"
 
-#: category/models.py:79
+#: category/models.py:105
 msgid "Not Europe"
 msgstr "Not Europe"
 
-#: category/models.py:83
+#: category/models.py:109
 msgid "Position I apply"
 msgstr "Position I apply"
 
-#: category/models.py:84
+#: category/models.py:110
 msgid "Different"
 msgstr "Different"
 
-#: category/models.py:89
+#: category/models.py:115
+msgid "cv_img"
+msgstr ""
+
+#: category/models.py:116
 msgid "birth_day"
 msgstr "Birthday"
 
-#: category/models.py:90
+#: category/models.py:117
 msgid "gender"
 msgstr "Gender"
 
-#: category/models.py:91
+#: category/models.py:118
 msgid "driving_license"
 msgstr "Driving license"
 
-#: category/models.py:92
+#: category/models.py:119
+#, fuzzy
+#| msgid "driving_license"
+msgid "driving_category"
+msgstr "Driving license"
+
+#: category/models.py:120
 msgid "first_lang"
 msgstr "First language"
 
-#: category/models.py:93
+#: category/models.py:121
 msgid "first_lang_level"
 msgstr "Level"
 
-#: category/models.py:94
+#: category/models.py:122
 msgid "second_lang"
 msgstr "Second language"
 
-#: category/models.py:95
+#: category/models.py:123
 msgid "second_lang_level"
 msgstr "Level"
 
-#: category/models.py:96
+#: category/models.py:124
 msgid "third_lang"
 msgstr "Third language "
 
-#: category/models.py:97
+#: category/models.py:125
 msgid "third_lang_level"
 msgstr "Level"
 
-#: category/models.py:98
+#: category/models.py:126
 msgid "ready_to_start"
 msgstr "Ready to start"
 
-#: category/models.py:99
+#: category/models.py:127
 msgid "expectet_salary"
 msgstr "Expected salary"
 
-#: category/models.py:100
+#: category/models.py:128
 msgid "sertificate_1"
 msgstr "Certificate"
 
-#: category/models.py:101
+#: category/models.py:129
 msgid "sertificate_2"
 msgstr "Certificate"
 
-#: category/models.py:104
+#: category/models.py:132
 msgid "country_1"
 msgstr "Country where you worked"
 
-#: category/models.py:105
+#: category/models.py:133
 msgid "company_name_1"
 msgstr "Company name"
 
-#: category/models.py:106
+#: category/models.py:134
 msgid "position_1"
 msgstr "Job title"
 
-#: category/models.py:107
+#: category/models.py:135
 msgid "start_date_1"
 msgstr "You started on:"
 
-#: category/models.py:108
+#: category/models.py:136
 msgid "end_date_1"
 msgstr "You ended on:"
 
-#: category/models.py:109
+#: category/models.py:137
 msgid "country_2"
 msgstr "Country where you worked"
 
-#: category/models.py:110
+#: category/models.py:138
 msgid "company_name_2"
 msgstr "Company name"
 
-#: category/models.py:111
+#: category/models.py:139
 msgid "position_2"
 msgstr "Job title"
 
-#: category/models.py:112
+#: category/models.py:140
 msgid "start_date_2"
 msgstr "You started on:"
 
-#: category/models.py:113
+#: category/models.py:141
 msgid "end_date_2"
 msgstr "You ended on:"
 
-#: category/models.py:114
+#: category/models.py:142
 msgid "country_3"
 msgstr "Country where you worked"
 
-#: category/models.py:115
+#: category/models.py:143
 msgid "company_name_3"
 msgstr "Company name"
 
-#: category/models.py:116
+#: category/models.py:144
 msgid "position_3"
 msgstr "Job title"
 
-#: category/models.py:117
+#: category/models.py:145
 msgid "start_date_3"
 msgstr "You started on:"
 
-#: category/models.py:118
+#: category/models.py:146
 msgid "end_date_3"
 msgstr "You ended on:"
 
-#: category/models.py:131
+#: category/models.py:159
 msgid "country"
 msgstr "Country of work:"
 
-#: category/models.py:132
+#: category/models.py:160
 msgid "city"
 msgstr "City of work:"
 
-#: category/models.py:133
+#: category/models.py:161
 msgid "address_order"
 msgstr "Job address"
 
-#: category/models.py:134
+#: category/models.py:162
 msgid "workers_number"
 msgstr "Workers quantity"
 
-#: category/models.py:135
+#: category/models.py:163
 msgid "start_date"
 msgstr "Start of contract"
 
-#: category/models.py:136
+#: category/models.py:164
 msgid "end_date"
 msgstr "End of contract"
 
-#: costumeuser/models.py:17
+#: costumeuser/forms.py:10 costumeuser/models.py:17
 msgid "first_name"
 msgstr "First name"
 
-#: costumeuser/models.py:18
+#: costumeuser/forms.py:11 costumeuser/models.py:18
 msgid "last_name"
 msgstr "Last name"
 
-#: costumeuser/models.py:19 costumeuser/models.py:30
+#: costumeuser/forms.py:12 costumeuser/forms.py:31 costumeuser/models.py:19
+#: costumeuser/models.py:30 templates/contacts.html:15
+#: templates/contacts.html:24
 msgid "phone"
 msgstr "Mobile"
 
-#: costumeuser/models.py:28
+#: costumeuser/forms.py:29 costumeuser/models.py:28
 msgid "company_name"
 msgstr "Company name"
 
-#: costumeuser/models.py:29
+#: costumeuser/forms.py:30 costumeuser/models.py:29
 msgid "address"
 msgstr "Company address"
+
+#: costumeuser/models.py:15
+#, fuzzy
+#| msgid "workers_number"
+msgid "worker"
+msgstr "Workers quantity"
+
+#: costumeuser/models.py:16 costumeuser/models.py:27
+msgid "image"
+msgstr ""
+
+#: costumeuser/models.py:26
+#, fuzzy
+#| msgid "company_name"
+msgid "company"
+msgstr "Company name"
 
 #: env/lib/python3.8/site-packages/crispy_forms/tests/test_form_helper.py:129
 #: env/lib/python3.8/site-packages/crispy_forms/tests/test_form_helper.py:139
@@ -1566,7 +1634,7 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: jobde/settings.py:195
+#: jobde/settings.py:215
 msgid "Bulgarian"
 msgstr "Bulgarian"
 
@@ -1696,20 +1764,21 @@ msgid ""
 "href=\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
 
-#: templates/account/login.html:5 templates/account/login.html:15
-#: templates/account/login.html:26
+#: templates/account/login.html:8 templates/account/login.html:11
+#: templates/account/login.html:23 templates/account/login.html:36
+#: templates/costumeuser/company_signup.html:6
 #: templates/costumeuser/worker_profile.html:12
 msgid "Sign In"
 msgstr ""
 
-#: templates/account/login.html:16
+#: templates/account/login.html:24
 #, python-format
 msgid ""
 "If you have not created an account yet, then please\n"
 "        <a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
 
-#: templates/account/login.html:24 templates/account/password_change.html:22
+#: templates/account/login.html:33 templates/account/password_change.html:22
 msgid "Forgot Password?"
 msgstr ""
 
@@ -1831,11 +1900,11 @@ msgstr ""
 msgid "Set Password"
 msgstr ""
 
-#: templates/account/profile.html:15 templates/account/profile.html:31
+#: templates/account/profile.html:15 templates/account/profile.html:33
 msgid "Username:"
 msgstr ""
 
-#: templates/account/profile.html:16 templates/account/profile.html:32
+#: templates/account/profile.html:16 templates/account/profile.html:34
 msgid "Email:"
 msgstr ""
 
@@ -1847,7 +1916,7 @@ msgstr ""
 msgid "Last Name:"
 msgstr ""
 
-#: templates/account/profile.html:19 templates/account/profile.html:35
+#: templates/account/profile.html:19 templates/account/profile.html:37
 msgid "Mobile:"
 msgstr ""
 
@@ -1864,23 +1933,23 @@ msgstr "Apply for Job"
 msgid "My Cv's"
 msgstr ""
 
-#: templates/account/profile.html:33
+#: templates/account/profile.html:35
 msgid "Company name:"
 msgstr ""
 
-#: templates/account/profile.html:34
+#: templates/account/profile.html:36
 msgid "Address:"
 msgstr ""
 
-#: templates/account/profile.html:38
+#: templates/account/profile.html:40
 msgid "Edit company information"
 msgstr "Edit Company information"
 
-#: templates/account/profile.html:40
+#: templates/account/profile.html:42
 msgid "Find employees"
 msgstr "Find Employees"
 
-#: templates/account/profile.html:42
+#: templates/account/profile.html:44
 msgid "My orders"
 msgstr ""
 
@@ -1889,13 +1958,13 @@ msgid "Signup"
 msgstr ""
 
 #: templates/account/signup.html:15
-#: templates/costumeuser/company_signup.html:21
-#: templates/costumeuser/worker_signup.html:24
+#: templates/costumeuser/company_signup.html:27
+#: templates/costumeuser/worker_signup.html:22
 msgid "Sign Up"
 msgstr ""
 
 #: templates/account/signup.html:16
-#: templates/costumeuser/company_signup.html:13
+#: templates/costumeuser/company_signup.html:17
 #: templates/costumeuser/worker_signup.html:14
 #, python-format
 msgid ""
@@ -1914,8 +1983,8 @@ msgstr ""
 msgid "Looking for employees"
 msgstr ""
 
-#: templates/account/signup.html:31 templates/category/cv_detail.html:61
-#: templates/category/cv_detail.html:69 templates/category/cv_detail.html:77
+#: templates/account/signup.html:31 templates/category/cv_detail.html:65
+#: templates/category/cv_detail.html:73 templates/category/cv_detail.html:81
 msgid "Company"
 msgstr ""
 
@@ -1972,23 +2041,31 @@ msgid ""
 "e-mail address</a>."
 msgstr ""
 
+#: templates/category/category_all.html:5
 #: templates/category/category_list.html:5 templates/footer.html:34
 #: templates/nav.html:13
 msgid "Job-Positions"
 msgstr ""
 
+#: templates/category/category_all.html:14
 #: templates/category/category_list.html:12
 msgid "All niches and job positions we work with."
 msgstr "All categories with job positions"
 
+#: templates/category/category_all.html:15
 #: templates/category/category_list.html:13
 msgid "Category info text"
 msgstr ""
 "Review all categories and choose the right one for you. In case of questions"
 " read FAQ or contact us"
 
+#: templates/category/category_all.html:23
+msgid "Choose the category to view all positions"
+msgstr ""
+
 #: templates/category/category_list.html:32
 #: templates/category/category_list.html:43
+#: templates/category/worker_cvs.html:16
 msgid "Get offer for workers"
 msgstr "Request workers"
 
@@ -2012,125 +2089,129 @@ msgstr ""
 msgid "CV you apply for"
 msgstr ""
 
-#: templates/category/cv_detail.html:28
+#: templates/category/cv_detail.html:30
 msgid "Profile"
 msgstr ""
 
-#: templates/category/cv_detail.html:29
+#: templates/category/cv_detail.html:31
 #: templates/category/order_detail.html:17
 msgid "Last updated on"
 msgstr ""
 
-#: templates/category/cv_detail.html:31
+#: templates/category/cv_detail.html:33
 msgid "First Name"
 msgstr ""
 
-#: templates/category/cv_detail.html:32
+#: templates/category/cv_detail.html:34
 msgid "Last Name"
 msgstr ""
 
-#: templates/category/cv_detail.html:33
+#: templates/category/cv_detail.html:35
 msgid "Email"
 msgstr ""
 
-#: templates/category/cv_detail.html:34
+#: templates/category/cv_detail.html:36
 msgid "Phone"
 msgstr ""
 
-#: templates/category/cv_detail.html:39
+#: templates/category/cv_detail.html:41
 msgid "CV generated by"
 msgstr "CV- "
 
-#: templates/category/cv_detail.html:40 templates/category/cv_form.html:25
+#: templates/category/cv_detail.html:42 templates/category/cv_form.html:40
 msgid " Personal Information"
 msgstr ""
 
-#: templates/category/cv_detail.html:42
+#: templates/category/cv_detail.html:44
 msgid "Birth day"
 msgstr "Birthday"
 
-#: templates/category/cv_detail.html:43
+#: templates/category/cv_detail.html:45
 msgid "Gender:"
 msgstr ""
 
-#: templates/category/cv_detail.html:44
+#: templates/category/cv_detail.html:46
 msgid "Driving License"
 msgstr ""
 
-#: templates/category/cv_detail.html:45
+#: templates/category/cv_detail.html:47
+msgid "Driving Category"
+msgstr ""
+
+#: templates/category/cv_detail.html:48
 msgid "Ready to strat work"
 msgstr ""
 
-#: templates/category/cv_detail.html:46
-msgid "Expected salary"
-msgstr ""
-
-#: templates/category/cv_detail.html:49 templates/category/cv_form.html:40
+#: templates/category/cv_detail.html:53 templates/category/cv_form.html:54
 msgid "Languages"
 msgstr ""
 
-#: templates/category/cv_detail.html:51
+#: templates/category/cv_detail.html:55
 msgid "First"
 msgstr ""
 
-#: templates/category/cv_detail.html:52 templates/category/cv_detail.html:54
-#: templates/category/cv_detail.html:56
+#: templates/category/cv_detail.html:56 templates/category/cv_detail.html:58
+#: templates/category/cv_detail.html:60
 msgid "Level"
 msgstr ""
 
-#: templates/category/cv_detail.html:53
+#: templates/category/cv_detail.html:57
 msgid "Second"
 msgstr ""
 
-#: templates/category/cv_detail.html:55
+#: templates/category/cv_detail.html:59
 msgid "Third"
 msgstr ""
 
-#: templates/category/cv_detail.html:58 templates/category/cv_form.html:53
+#: templates/category/cv_detail.html:62 templates/category/cv_form.html:67
 msgid "Last employers"
-msgstr ""
-
-#: templates/category/cv_detail.html:60 templates/category/cv_detail.html:68
-#: templates/category/cv_detail.html:76
-msgid "Country"
-msgstr ""
-
-#: templates/category/cv_detail.html:62 templates/category/cv_detail.html:70
-#: templates/category/cv_detail.html:78
-msgid "Position"
-msgstr ""
-
-#: templates/category/cv_detail.html:63 templates/category/cv_detail.html:71
-#: templates/category/cv_detail.html:79
-msgid "Start date"
 msgstr ""
 
 #: templates/category/cv_detail.html:64 templates/category/cv_detail.html:72
 #: templates/category/cv_detail.html:80
+msgid "Country"
+msgstr ""
+
+#: templates/category/cv_detail.html:66 templates/category/cv_detail.html:74
+#: templates/category/cv_detail.html:82
+msgid "Position"
+msgstr ""
+
+#: templates/category/cv_detail.html:67 templates/category/cv_detail.html:75
+#: templates/category/cv_detail.html:83
+msgid "Start date"
+msgstr ""
+
+#: templates/category/cv_detail.html:68 templates/category/cv_detail.html:76
+#: templates/category/cv_detail.html:84
 msgid "End date"
 msgstr ""
 
-#: templates/category/cv_detail.html:66 templates/category/cv_form.html:65
+#: templates/category/cv_detail.html:70 templates/category/cv_form.html:79
 msgid "Second employers"
 msgstr ""
 
-#: templates/category/cv_detail.html:74 templates/category/cv_form.html:77
+#: templates/category/cv_detail.html:78 templates/category/cv_form.html:91
 msgid "Third employers"
 msgstr ""
 
-#: templates/category/cv_detail.html:85 templates/category/cv_detail.html:91
+#: templates/category/cv_detail.html:89 templates/category/cv_detail.html:95
 msgid "Certificate"
 msgstr ""
 
-#: templates/category/cv_form.html:5 templates/category/cv_form.html:17
+#: templates/category/cv_form.html:6 templates/category/cv_form.html:18
 msgid "Create Cv"
 msgstr ""
 
-#: templates/category/cv_form.html:16
+#: templates/category/cv_form.html:17
 msgid "you are about to apply Cv for:"
 msgstr ""
 
-#: templates/category/cv_form.html:94
+#: templates/category/cv_form.html:26
+msgid "Upload Cv Photo"
+msgstr ""
+
+#: templates/category/cv_form.html:108
 msgid "You have to be register as Worker to register your CV for:"
 msgstr ""
 
@@ -2203,19 +2284,55 @@ msgstr "Last update"
 msgid "Position you requested"
 msgstr ""
 
-#: templates/category/worker_cvs.html:5 templates/category/worker_cvs.html:14
+#: templates/category/partners.html:5 templates/category/partners.html:10
+#: templates/footer.html:37 templates/nav.html:16
+msgid "Partners"
+msgstr ""
+
+#: templates/category/worker_cvs.html:5 templates/category/worker_cvs.html:19
 msgid "All applyed CV's for"
 msgstr ""
 
-#: templates/costumeuser/company_signup.html:12
+#: templates/contacts.html:4 templates/contacts.html:8
+#: templates/footer.html:46 templates/nav.html:25
+msgid "Contact"
+msgstr ""
+
+#: templates/contacts.html:13
+msgid "Private"
+msgstr ""
+
+#: templates/contacts.html:16 templates/contacts.html:25
+#, fuzzy
+#| msgid "address"
+msgid "Address"
+msgstr "Company address"
+
+#: templates/contacts.html:17 templates/contacts.html:26
+#, fuzzy
+#| msgid "Femail"
+msgid "email"
+msgstr "Female"
+
+#: templates/contacts.html:22
+#, fuzzy
+#| msgid "company_name"
+msgid "Cv_ompany"
+msgstr "Company name"
+
+#: templates/costumeuser/company_signup.html:16
 msgid "Sign Up as Employer"
+msgstr ""
+
+#: templates/costumeuser/company_signup.html:26
+msgid "With pressing sign up you are agree with"
 msgstr ""
 
 #: templates/costumeuser/worker_signup.html:12
 msgid "Sign Up as Employee"
 msgstr ""
 
-#: templates/faq/faq_detail.html:14
+#: templates/faq/faq_detail.html:16
 msgid "All questions"
 msgstr ""
 
@@ -2251,16 +2368,12 @@ msgstr "Pages"
 msgid "Home"
 msgstr "Home"
 
-#: templates/footer.html:37 templates/nav.html:16
+#: templates/footer.html:40 templates/nav.html:22
 msgid "News"
 msgstr ""
 
-#: templates/footer.html:40 templates/nav.html:19
+#: templates/footer.html:43 templates/nav.html:19
 msgid "FAQ"
-msgstr ""
-
-#: templates/footer.html:43 templates/nav.html:22
-msgid "Contact"
 msgstr ""
 
 #: templates/home.html:16
@@ -2291,26 +2404,44 @@ msgstr ""
 msgid "Applyed CV's we recive"
 msgstr ""
 
+#: templates/home.html:33
+msgid "Applyed CV number"
+msgstr ""
+
 #: templates/home.html:39
 msgid "Working Hours we deliver"
 msgstr ""
+
+#: templates/home.html:40
+#, fuzzy
+#| msgid "workers_number"
+msgid "Working Hours number"
+msgstr "Workers quantity"
 
 #: templates/home.html:46
 msgid "Contracts with companys"
 msgstr "Partners"
 
-#: templates/nav.html:43
+#: templates/home.html:47
+#| msgid "workers_number"
+msgid "Partners number"
+msgstr "39"
+
+#: templates/nav.html:52
 msgid "Logout"
 msgstr ""
 
-#: templates/nav.html:47
+#: templates/nav.html:56
 msgid "Login In"
 msgstr ""
 
-#: templates/nav.html:50
+#: templates/nav.html:59
 msgid "Register"
 msgstr ""
 
 #: templates/news/news_list.html:4 templates/news/news_list.html:9
 msgid "Latest news"
 msgstr ""
+
+#~ msgid "Turkish"
+#~ msgstr "Turkish"

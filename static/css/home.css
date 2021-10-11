@@ -13,6 +13,7 @@
     font-family: 'Pattaya', sans-serif;
     margin: auto;
     text-align: center;
+    font-size: 15px;
 }
 
 /* .headerone {
@@ -28,13 +29,13 @@
 
 .about-text {
     font-size : 25px;
-    color: white;
+    color: black;
 }
 
 .card-title {
     color: #BF92C4;
 }
 .about {
-    color: white;
+    color: black;
     text-align: center;
 }

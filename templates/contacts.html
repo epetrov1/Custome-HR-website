@@ -1,6 +1,31 @@
 {% extends "base.html" %}
-
-
+{% load i18n %}
+{% block headers %}
+<title>{% trans "Contact" %}</title>
+{% endblock headers %} 
 {% block content %}
-    <h1>This is a Contact page</h1>
+<div class="container">
+    <h1 style="color: black; text-align: center">{% trans "Contact" %}</h1>
+    <br>
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="card text-center">
+                <h2 style="color: black; text-align: center">{% trans "Private" %}</h2>
+                <br>
+                <p><b>{% trans "phone" %}:</b> +49 151 755 30336</p>
+                <p><b>{% trans "Address" %}:</b> Lindwurmstraße 126A <br>80337 München Germany</p>
+                <p><b>{% trans "email" %}:</b> employee@germanyarbeit.de</p>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="card text-center">
+                <h2 style="color: black; text-align: center">{% trans "Cv_ompany" %}</h2>
+                <br>
+                <p><b>{% trans "phone" %}:</b> +49 151 755 30336</p>
+                <p><b>{% trans "Address" %}:</b> Lindwurmstraße 126A <br>80337 München Germany</p>
+                <p><b>{% trans "email" %}:</b> company@germanyarbeit.de</p>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}

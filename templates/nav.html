@@ -39,9 +39,15 @@
     <!-- Authentication -->
     <ul class="navbar-nav">
       {% if user.is_authenticated %}
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'profile' %}">{{ user.username }}</a>
-      </li>
+        {% if user.is_worker %}
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'profile' %}">{{ user.worker.first_name }}</a>
+        </li>
+        {% elif user.is_company %}
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'profile' %}">{{ user.company.company_name }}</a>
+        </li>
+        {% endif %}
       <li class="nav-item">
         <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Logout" %}</a>
       </li>

@@ -117,9 +117,11 @@ def worker_cv(request, id):
         form = CvForm(request.POST, request.FILES)
         #subcat = SubCategory.objects.get(pk=id)
         if form.is_valid():
+            cv_img = form.cleaned_data['cv_img']
             birth_day = form.cleaned_data['birth_day'] 
             gender = form.cleaned_data['gender']
             driving_license = form.cleaned_data['driving_license']
+            driving_category = form.cleaned_data['driving_category']
             first_lang = form.cleaned_data['first_lang']
             first_lang_level = form.cleaned_data['first_lang_level']
             second_lang = form.cleaned_data['second_lang']
@@ -150,9 +152,11 @@ def worker_cv(request, id):
             job = SubCategory.objects.get(pk=id)
             worker = User.objects.get(id=request.user.id)#request.user.id#form.instance.user = self.request.user
             Cv.objects.create(
+                cv_img=cv_img,
                 birth_day=birth_day,
                 gender=gender,
                 driving_license=driving_license,
+                driving_category=driving_category,
                 first_lang=first_lang,
                 first_lang_level=first_lang_level,
                 second_lang=second_lang,
@@ -202,9 +206,11 @@ def edit_cv(request, id):
         form = CvForm(request.POST, request.FILES)
 
         if form.is_valid():
+            cv.cv_img = form.cleaned_data['cv_img']
             cv.birth_day = form.cleaned_data['birth_day'] 
             cv.gender = form.cleaned_data['gender']
             cv.driving_license = form.cleaned_data['driving_license']
+            cv.driving_category = form.cleaned_data['driving_category']
             cv.first_lang = form.cleaned_data['first_lang']
             cv.first_lang_level = form.cleaned_data['first_lang_level']
             cv.second_lang = form.cleaned_data['second_lang']
@@ -235,8 +241,8 @@ def edit_cv(request, id):
 
             return HttpResponseRedirect(reverse('cv_detail', args=(id,)))
     else:
-        default_data = {'birth_day': cv.birth_day, 'gender': cv.gender,
-                        'driving_license': cv.driving_license, 'first_lang': cv.first_lang,
+        default_data = {'cv_img': cv.cv_img, 'birth_day': cv.birth_day, 'gender': cv.gender,
+                        'driving_license': cv.driving_license, 'driving_category': cv.driving_category, 'first_lang': cv.first_lang,
                         'first_lang_level': cv.first_lang_level, 'second_lang': cv.second_lang,
                         'second_lang_level': cv.second_lang_level, 'third_lang': cv.third_lang,
                         'third_lang_level': cv.third_lang_level, 'ready_to_start': cv.ready_to_start,

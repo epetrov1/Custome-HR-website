@@ -23,14 +23,14 @@ class News(models.Model):
             queryset = News.objects.all().filter(slug__iexact=slug).count()
         self.slug = slug
 
-        if self.featured:
+        """ if self.featured:
             try:
                 temp = News.objects.get(featured=True)
                 if self != temp:
                     temp.featured = False
                     temp.save()
             except News.DoesNotExist:
-                pass
+                pass """
         super(News, self).save(*args, **kwargs)
         
     def __str__(self):

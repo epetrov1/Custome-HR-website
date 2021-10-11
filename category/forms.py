@@ -1,12 +1,15 @@
 from django.forms import ModelForm, widgets
 from django import forms
 from .models import CompanyOrder, Cv
+from django.utils.translation import gettext_lazy as _
 
 
 #Costume widget for a datefields
 class DateInput(forms.DateInput):
    input_type = 'date'
 
+class DrivingCat(forms.CheckboxSelectMultiple):
+   input_type = 'checkbox'
 
 # Form for reqesting a offer from company for workers
 class CompanyOrderForm(ModelForm):
@@ -16,8 +19,11 @@ class CompanyOrderForm(ModelForm):
       fields = ['country', 'city', 'address', 'workers_number', 'start_date', 'end_date']
 
 
+
 # CV form for specific subcategory
 class CvForm(ModelForm):
+
+   #driving_category = forms.MultipleChoiceField(choices=DRIVING_CATEGORY, widget=DrivingCat, required=False)   
    class Meta:
       widgets = {
       'birth_day': DateInput, 
@@ -28,12 +34,16 @@ class CvForm(ModelForm):
       'end_date_1': DateInput, 
       'end_date_2': DateInput,
       'end_date_3': DateInput,
+      'driving_category': DrivingCat,
       }
+
       model = Cv
       fields = [
+         'cv_img',
          'birth_day', 
          'gender', 
          'driving_license',
+         'driving_category',
          'first_lang',
          'first_lang_level', 
          'second_lang', 

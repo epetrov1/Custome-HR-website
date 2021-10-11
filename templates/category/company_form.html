@@ -12,24 +12,24 @@
 <br>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="col-lg-6 col-md-12 col-sm-12">
             {% if user.is_authenticated and user.is_company %}
-            <h1><b>{{ user.username }}</b>- {% trans "you are about to send application for:" %} <i style="color:black">{{ subcat.name }}</i></h1>
+            <h3 style="text-align:center;"><b>{{ user.company.company_name }}</b></h3><!--- {% trans "you are about to send application for:" %} <i style="color:black">{{ subcat.name }}</i> -->
                 <br>
                 <form class="profile-company" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
-                    <div class="row row-cols-1 row-cols-md-2 g-4">
-                        <div class="card h-100">
+                    
+                        <div class="card h-100 text-white bg-dark">
                             <div class="card-body">
+                                <h4 class="about" style="color:blue; text-align:center;">www.germanyarbeit.de</h4>
                                 {{ form|crispy }}
                                 <br>
                                 <div class="button-wrapper submit">
-                                    <input class="btn btn-success" type="submit" value="Request price" />
+                                    <input class="btn btn-success" type="submit" value="Request offer" />
                                 </div>
                                 <br>
                             </div>
                         </div>
-                    </div>
                 </form>
             {% elif user.is_authenticated and user.is_worker %}
                 <h2>{% trans "You have to be register as Company to take offer for" %} {{ subcat.name }}.</h2>

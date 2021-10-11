@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% load i18n %}
+{% load static %}
 {% block headers %}
 <title>{% trans "Create Cv" %}</title>
-
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
 {% endblock headers %}
 
 
@@ -22,12 +23,25 @@
                                     <div class="card h-100">
                                         
                                         <div class="card-body">
+                                            <h2 class="card-title"><span class="badge bg-secondary">{% trans "Upload Cv Photo" %}</span></h2>
+                                                <div id="cv-photo-container">
+                                                    <img id="cv-photo" src="{% static 'img/default.jpeg' %}" style="width:200px; height:auto;">
+                                                </div>    
+                                                {{ form.cv_img|as_crispy_field }}
+                                                {{ form.birth_day|as_crispy_field }}
+                                                {{ form.gender|as_crispy_field }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100">
+                                        
+                                        <div class="card-body">
                                             <h2 class="card-title"><span class="badge bg-secondary">{% trans " Personal Information" %}</span></h2>
-                                            {{ form.birth_day|as_crispy_field }}
-                                            {{ form.gender|as_crispy_field }}
                                             {{ form.driving_license|as_crispy_field }}
+                                            {{ form.driving_category|as_crispy_field }}
                                             {{ form.ready_to_start|as_crispy_field }}
-                                            {{ form.expectet_salary|as_crispy_field }}€
+                                            {{ form.expectet_salary|as_crispy_field }}
                                             {{ form.sertificate_1|as_crispy_field }}
                                             {{ form.sertificate_2|as_crispy_field }}
                                             
@@ -98,5 +112,34 @@
         </div>
     </div>
 </div>
+<script>
+    const inpFile = document.getElementById("id_cv_img");
+    const previewContainer = document.getElementById("cv-photo-container");
+    const previewImage = document.getElementById("cv-photo");
+    const previewDefaultImage = document.getElementById("cv-photo");
+
+    inpFile.addEventListener("change", function() {
+        const file = this.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            previewDefaultImage.style.display = "none";
+            previewImage.style.display = "block";
+
+            reader.addEventListener("load", function() {
+                previewImage.setAttribute("src", this.result);
+            });
+
+            reader.readAsDataURL(file);
+        } else {
+            previewDefaultImage.style.display = "none";
+            previewImage.style.display = "none";
+            previewImage.setAttribute("src", "{% static 'img/default.jpeg' %}");
+            
+        }
+    });
+</script>
+
 
 {% endblock content %}

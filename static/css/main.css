@@ -11,4 +11,11 @@
 
 .btn {
     background-color: #97C492;
+    font-weight: bold;
+    color: black;
+}
+
+.form-check {
+    display: inline-block;
+    padding-right: 5px;
 }

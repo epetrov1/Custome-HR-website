@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-13 14:04+0300\n"
-"PO-Revision-Date: 2021-07-15 07:31+0000\n"
+"POT-Creation-Date: 2021-07-24 11:36+0000\n"
+"PO-Revision-Date: 2021-07-24 11:37+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -37,11 +37,11 @@ msgstr "Да"
 msgid "No"
 msgstr "Не"
 
-#: category/models.py:39 jobde/settings.py:193
+#: category/models.py:39 jobde/settings.py:205
 msgid "English"
 msgstr "Английски"
 
-#: category/models.py:40 jobde/settings.py:194
+#: category/models.py:40 jobde/settings.py:206
 msgid "German"
 msgstr "Немски"
 
@@ -343,6 +343,11 @@ msgstr "Адрес на фирмата"
 #| msgid "Worker"
 msgid "worker"
 msgstr "Работник"
+
+#: costumeuser/models.py:16 costumeuser/models.py:27
+#| msgid "Image"
+msgid "image"
+msgstr "Снимка"
 
 #: costumeuser/models.py:26
 #, fuzzy
@@ -1575,7 +1580,7 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: jobde/settings.py:195
+#: jobde/settings.py:207
 msgid "Bulgarian"
 msgstr "Български"
 
@@ -1903,7 +1908,7 @@ msgstr "Регистрирай се"
 
 #: templates/account/signup.html:15
 #: templates/costumeuser/company_signup.html:21
-#: templates/costumeuser/worker_signup.html:23
+#: templates/costumeuser/worker_signup.html:22
 msgid "Sign Up"
 msgstr "Регистрирай се"
 
@@ -1993,7 +1998,7 @@ msgstr ""
 
 #: templates/category/category_all.html:5
 #: templates/category/category_list.html:5 templates/footer.html:34
-#: templates/nav.html:13
+#: templates/home.html:55 templates/home.html:57 templates/nav.html:13
 msgid "Job-Positions"
 msgstr "Работни Позиции"
 

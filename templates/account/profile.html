@@ -10,7 +10,7 @@
         <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="card">
             {% if user.is_authenticated and user.is_worker %}
-                <img class="img-thumbnail" src="{{ user.worker.image.url }}">
+                <a href="{% url 'worker_profile_edit' user.id %}"><img class="img-thumbnail" src="{{ user.worker.image.url }}" style="width:600px; height:auto;" alt=""></a>
                 <div class="info">
                     <h2><span class="badge rounded-pill bg-success">{% trans "Username:" %}</span> {{ user.username }}</h2>
                     <p class="text-scondary"><b><span class="badge rounded-pill bg-success">{% trans "Email:" %}</span> {{ user.email }}</b></p>
@@ -26,7 +26,9 @@
                 <a class="btn btn-success" style="text-decoration: none; color:white; font-weight:20" href="{% url 'cv_list' %}">{% trans "My Cv's" %}</a>
                 <br />
             {% elif user.is_authenticated and user.is_company %}
+                <a href="{% url 'company_profile_edit' user.id %}">
                 <img class="img-thumbnail" src="{{ user.company.image.url }}">
+                </a>
                 <div class="info">
                     <h2><span class="badge rounded-pill bg-success">{% trans "Username:" %}</span> {{ user.username }}</h2>
                     <p class="text-scondary"><b><span class="badge rounded-pill bg-success">{% trans "Email:" %}</span> {{ user.email }}</b></p>
